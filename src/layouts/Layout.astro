@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 
+import PreHeader from "../components/PreHeader.astro";
 import HeaderDarkMode from "../components/HeaderDarkMode";
 ---
 
@@ -20,6 +21,7 @@ import HeaderDarkMode from "../components/HeaderDarkMode";
     <title>Astro Basics</title>
   </head>
   <body class="bg-gradient-to-br from-[#12041F] to-[#030206]">
+    <PreHeader />
     <HeaderDarkMode client:load />
     <slot />
   </body>

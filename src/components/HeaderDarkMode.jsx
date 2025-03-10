@@ -1,5 +1,6 @@
 import { useState } from "react";
 import LogoDarkMode from "../../public/logo--zorus--white.svg?url";
+import "../../src/styles/global.css";
 
 const Navbar = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
@@ -7,37 +8,6 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="mb-5 bg-[#171717]">
-        <div className="container mx-auto max-w-7xl px-5 py-2 md:px-12">
-          <div className="flex items-center justify-center md:justify-between">
-            <div className="space-x-3">
-              <span className="text-[#b6c8dd]">FREE MSP Marketing Kit</span>
-              <a
-                href="https://lp.zorustech.com/sales-flyers"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button className="font-monospace border-2 border-[#00f0ff] px-2 py-1 font-semibold uppercase text-[#00f0ff]">
-                  Download Here
-                </button>
-              </a>
-            </div>
-            <div className="hidden space-x-6 md:block">
-              <span className="text-[#b6c8dd]">(888) 428-2343</span>
-              <a
-                href="https://portal.zorustech.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button className="font-monospace font-semibold uppercase text-[#7e89ad] transition duration-300 ease-out hover:text-[#00f0ff]">
-                  Sign In
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <header className="container sticky top-5 z-50 mx-auto max-w-7xl px-4 md:px-6">
         <nav
           className="relative z-10 flex items-center justify-between rounded-md border border-white/5 bg-white/5 px-5 py-2 ring-1 ring-slate-950/25 backdrop-blur-2xl"
@@ -85,7 +55,7 @@ const Navbar = () => {
           {/* Desktop menu */}
           <ul className="hidden items-center space-x-6 text-sm font-medium uppercase text-white lg:flex lg:flex-wrap">
             <li
-              className="relative flex cursor-pointer items-center gap-x-1.5"
+              className="relative flex cursor-pointer items-center gap-x-1.5 lg:py-3"
               onMouseEnter={() => setOpenDropdown("compare")}
               onMouseLeave={() => setOpenDropdown(false)}
             >
@@ -107,8 +77,8 @@ const Navbar = () => {
               </button>
               {/* 2nd level menu */}
               {openDropdown === "compare" && (
-                <ul className="absolute left-1/2 top-8 min-w-[240px] origin-top-right -translate-x-1/2 rounded-lg bg-gradient-to-b from-[#05B4F4] to-[#660DAB] p-px shadow-xl">
-                  <div className="bg-triangles space-y-6 rounded-lg bg-gradient-to-b from-[#171717] to-[#090909] p-8">
+                <ul className="absolute left-1/2 top-11 min-w-[240px] origin-top-right -translate-x-1/2 rounded-lg bg-gradient-to-b from-[#05B4F4] to-[#660DAB] p-px shadow-xl">
+                  <div className="dropdown-nav-bg space-y-6 overflow-hidden rounded-lg p-8">
                     <li>
                       <a
                         href="/zorus-vs-cisco-umbrella"
@@ -153,7 +123,7 @@ const Navbar = () => {
                 </ul>
               )}
             </li>
-            <li>
+            <li className="lg:py-3">
               <a
                 href="/about"
                 className="font-monospace text-base font-semibold uppercase text-white transition delay-150 ease-in-out hover:text-[#00f0ff]"
@@ -161,7 +131,7 @@ const Navbar = () => {
                 About
               </a>
             </li>
-            <li>
+            <li className="lg:py-3">
               <a
                 href="/referrals"
                 className="font-monospace text-base font-semibold uppercase text-white transition delay-150 ease-in-out hover:text-[#00f0ff]"
@@ -170,7 +140,7 @@ const Navbar = () => {
               </a>
             </li>
             <li
-              className="relative flex cursor-pointer items-center gap-x-1.5"
+              className="relative flex cursor-pointer items-center gap-x-1.5 lg:py-3"
               onMouseEnter={() => setOpenDropdown("resources")}
               onMouseLeave={() => setOpenDropdown(false)}
             >
@@ -192,8 +162,8 @@ const Navbar = () => {
               </button>
               {/* 2nd level menu */}
               {openDropdown === "resources" && (
-                <ul className="absolute left-1/2 top-8 min-w-[240px] origin-top-right -translate-x-1/2 rounded-lg bg-gradient-to-b from-[#05B4F4] to-[#660DAB] p-px shadow-xl">
-                  <div className="bg-triangles space-y-6 rounded-lg bg-gradient-to-b from-[#171717] to-[#090909] p-8">
+                <ul className="absolute left-1/2 top-10 min-w-[240px] origin-top-right -translate-x-1/2 rounded-lg bg-gradient-to-b from-[#05B4F4] to-[#660DAB] p-px shadow-xl">
+                  <div className="dropdown-nav-bg space-y-6 rounded-lg p-8">
                     <li>
                       <a
                         href="/blog"

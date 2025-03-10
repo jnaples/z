@@ -31,5 +31,11 @@ p {
 }
 
 .bg-triangles {
-  background: var(--triangle-bg) center center / contain no-repeat;
+  background: center center / contain no-repeat;
+}
+
+.dropdown-nav-bg {
+  background:
+    var(--triangle-bg) center center / contain no-repeat,
+    linear-gradient(rgb(23, 23, 23), rgb(9, 9, 9) 90%);
 }
