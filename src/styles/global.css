@@ -9,6 +9,7 @@
   --body-text: #b6c8dd;
   --heading-font-size: 2rem; /* Example: can use Tailwind's font-size values */
   --body-font-size: 1rem;
+  --triangle-bg: url("../../public/triangles.svg");
 }
 
 h1,
@@ -27,4 +28,8 @@ p {
 .font-monospace {
   font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
+}
+
+.bg-triangles {
+  background: var(--triangle-bg) center center / contain no-repeat;
 }
