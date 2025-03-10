@@ -1,71 +1,87 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro'
+
+import boxCornerUrl from '../assets/box-corner.svg?url';
+import checkboxUrl from '../assets/checkbox-gradient.svg?url';
+import ChannelProgramQ12024 from '../assets/channel-program-q1-24.png'
+import ChannelProgramQ22024 from '../assets/channel-program-q2-24.png'
+import ChannelProgramQ32024 from '../assets/channel-program-q3-24.png'
+import ChannelProgramQ42024 from '../assets/channel-program-q4-24.png'
+import GridBG from '../assets/grid-bg.png';
+import iconClockUrl from '../assets/icon--clock.png';
+import iconDeployUrl from '../assets/icon--deploy.svg?url';
+import iconReferralUrl from '../assets/icon--referral.svg?url';
+import iconScalingUrl from '../assets/icon--scaling.svg?url';
+import iconSupportUrl from '../assets/icon--support.svg?url';
+---
+
 
 <!--------------- MAIN SECTION ------------------>
+
+<Layout>
 <main class="overflow-x-hidden">
-  <section class="hero relative">
+  <Section class="hero relative">
     <div class="container mx-auto max-w-7xl flex items-center flex-col px-4 md:px-6">
       <h1
-        class="text-4xl md:text-5xl mb-6 font-semibold w-full lg:max-w-4xl md:leading-tight text-center leading-tight" data-sal="slide-down" data-sal-duration="600">
+        class="text-4xl md:text-5xl mb-6 font-semibold w-full font-monospace lg:max-w-4xl md:leading-tight text-center leading-tight" data-sal="slide-down" data-sal-duration="600">
         Block evolving threats with cybersecurity that refuses to let you fall behind </h1>
       <div class="mb-10 w-full lg:max-w-3xl" data-sal="slide-down" data-sal-duration="600" data-sal-delay="200">
         <ul class="flex flex-col gap-4 items-center list-unstyled">
           <li class="flex items-center gap-2">
-            <img loading="lazy" alt="checkbox"
-              src="<?php echo get_theme_file_uri('/images/checkbox-gradient.svg') ?>" />
+            <img alt="checkbox" src={checkboxUrl}  />
             <p class="text-lg md:text-2xl">DNS filtering without the DNS changes</p>
           </li>
           <li class="flex items-center gap-2">
-            <img loading="lazy" alt="checkbox"
-              src="<?php echo get_theme_file_uri('/images/checkbox-gradient.svg') ?>" />
+           <img alt="checkbox" src={checkboxUrl}  />
             <p class="text-lg md:text-2xl">Spot risky behaviors with user analytics</p>
           </li>
           <li class="flex items-center gap-2">
-            <img loading="lazy" alt="checkbox"
-              src="<?php echo get_theme_file_uri('/images/checkbox-gradient.svg') ?>" />
+           <img alt="checkbox" src={checkboxUrl}  />
             <p class="text-lg md:text-2xl">Isolate devices with Zero-trust isolation</p>
           </li>
           <li class="flex items-center gap-2">
-            <img loading="lazy" alt="checkbox"
-              src="<?php echo get_theme_file_uri('/images/checkbox-gradient.svg') ?>" />
+           <img alt="checkbox" src={checkboxUrl}  />
             <p class="text-lg md:text-2xl">Geo IP & network filtering</p>
           </li>
           <li class="flex items-center gap-2">
-            <img loading="lazy" alt="checkbox"
-              src="<?php echo get_theme_file_uri('/images/checkbox-gradient.svg') ?>" />
+           <img alt="checkbox" src={checkboxUrl}  />
             <p class="text-lg md:text-2xl">SaaS inventory & usage</p>
           </li>
         </ul>
       </div>
       <div class="flex flex-col items-center space-y-4" data-sal="slide-down" data-sal-duration="600" data-sal-delay="400">
-        <a href="<?php echo site_url("/book-a-live-demo") ?>">
+        <a href="/book-a-demo">
           <button class="btn glitch demo inline-block btn-solid uppercase">See how Zorus can help you</button>
         </a>
-        <span span class="font-light text-[#b6c8dd] text-sm">No-pressure demo. Free two-week trial.</span>
+        <span class="font-light text-[#b6c8dd] text-sm">No-pressure demo. Free two-week trial.</span>
       </div>
     </div>
-  </section>
+  </Section>
 
-  <section>
+  <Section>
     <div class="container mx-auto max-w-7xl px-4 md:px-6">
       <div class="msp-it-card w-full relative">
         <div class="flex mx-0 flex-col md:flex-row text-center justify-between md:gap-x-10">
           <div class="w-full lg:w-5/12 flex flex-col items-center justify-between py-10 pr-0 md:pl-10 lg:pl-20">
             <div class="text-center">
-              <img class="mb-12 mx-auto" src="<?php echo get_theme_file_uri('/images/icon--referral.svg') ?>" alt=""
-                width="72" height="72">
-              <h2 class="mb-4 lh-base text-4xl font-semibold">MSPs & MSSPs</h2>
+              <Image class="mb-12 mx-auto" src={iconReferralUrl} alt=""
+                width="72" height="72"/>
+              <h2 class="mb-4 lh-base text-4xl font-semibold font-monospace">MSPs & MSSPs</h2>
               <p class="mb-6 w-full mx-auto text-lg">See how Zorus transforms MSPs and MSSPs ability to protect clients,
                 enhance security expertise, and enjoy peace of mind.</p>
             </div>
-            <a href="<?php echo site_url("/partners") ?>">
+            <a href="/partners">
               <button class="btn glitch demo inline-block btn-solid">LEARN MORE</button>
             </a>
           </div>
           <div class="msp-it-card--divider w-full md:w-1/12 px-md-0"></div>
           <div class="w-full lg:w-5/12 flex flex-col items-center justify-between py-10 pl-0 md:pr-10 lg:pr-20">
             <div>
-              <img class="mb-12 mx-auto" src="<?php echo get_theme_file_uri('/images/icon--scaling.svg') ?>" alt=""
+              <img class="mb-12 mx-auto" src={iconScalingUrl} alt="icon"
                 width="72" height="72">
-              <h2 class="mb-4 lh-base text-4xl font-semibold">IT Professionals</h2>
+              <h2 class="mb-4 lh-base text-4xl font-semibold font-monospace">IT Professionals</h2>
               <p class="mb-6 w-full mx-auto text-lg">Integrate seamlessly into your IT ecosystem with enterprise-grade
                 DNS filtering, user analytics, and more.</p>
             </div>
@@ -75,10 +91,9 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
+  </Section>
 
-  <section class="">
+  <Section>
     <div class="container mx-auto max-w-7xl px-4 md:px-6">
       <div class="flex">
         <div class="w-full mx-auto text-center  mb-8">
@@ -89,17 +104,17 @@
         </div>
       </div>
       <div class="flex flex-col mx-auto gap-y-10 gap-x-10 items-center justify-center md:flex-row md:w-2/3 md:flex-wrap lg:w-full">
-        <img class="mx-auto w-[120px] md:mx-0" src="<?php echo get_theme_file_uri('/images/CRN.png') ?>" alt="CRN badge">
-        <img class="mx-auto w-[140px] md:mx-0" src="<?php echo get_theme_file_uri('/images/q1-24.png') ?>" alt="Channel Program badge">
-        <img class="mx-auto w-[140px] md:mx-0" src="<?php echo get_theme_file_uri('/images/q2-24.png') ?>" alt="Channel Program badge">
-        <img class="mx-auto w-[140px] md:mx-0" src="<?php echo get_theme_file_uri('/images/q3-24.png') ?>" alt="Channel Program badge">
-        <img class="mx-auto w-[140px] md:mx-0" src="<?php echo get_theme_file_uri('/images/q4-24.png') ?>" alt="Channel Program badge">
+          <Image src={ChannelProgramQ12024} class="mx-auto w-[140px] md:mx-0" alt="Channel Program Q1 2024" />
+          <Image src={ChannelProgramQ22024} class="mx-auto w-[140px] md:mx-0" alt="Channel Program Q2 2024" />
+          <Image src={ChannelProgramQ32024} class="mx-auto w-[140px] md:mx-0" alt="Channel Program Q3 2024" />
+          <Image src={ChannelProgramQ42024} class="mx-auto w-[140px] md:mx-0" alt="Channel Program Q4 2024" />
+       
       </div>
     </div>
-  </section>
+  </Section>
 
   <!------------------- CUT --------------------->
-  <section class="cut--right overflow-visible">
+  <Section class="cut--right overflow-visible">
     <div class="container mx-auto max-w-7xl px-4 md:px-6">
       <div class="flex">
         <div class="w-full mx-auto text-center">
@@ -120,16 +135,16 @@
         </div>
       </div>
     </div>
-  </section>
+  </Section>
 
 
 
-  <section>
+  <Section>
     <div class="container mx-auto max-w-7xl px-4 md:px-6">
         <div class="testimonial-block relative">
           <img src="<?php echo get_theme_file_uri('/images/abstract-wave.svg') ?>" alt="abstract wave"
             class="absolute bottom-0 end-0 testimonial--bg-img">
-          <h2 class="font-semibold text-2xl">“Zorus is easy to deploy and easy to manage.
+          <h2 class="font-semibold text-2xl font-monospace">“Zorus is easy to deploy and easy to manage.
             It doesn’t break your environment, VPNs, Active Directory or custom DNS implementations like traditional DNS
             filtering.
             It’s also very cost-effective.”</h2>
@@ -144,79 +159,84 @@
           </div>
         </div>
     </div>
-  </section>
+  </Section>
 
   <!------------------- ACHIEVEMENTS --------------------->
-  <section>
+  <Section>
     <div class="container mx-auto max-w-7xl px-4 md:px-6">
       <h2 class="text-center mx-auto font-monospace font-semibold text-4xl leading-tight mb-12 lg:max-w-3xl md:leading-tight">
         Zorus Filtering with CyberSight, DNS protection for the modern era
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-3 justify-items-between gap-y-12 md:gap-y-0 md:gap-x-5 lg:gap-x-10">
-        <div class="feature-box relative w-full" data-sal="slide-left" data-sal-duration="600">
-          <img src="<?php echo get_theme_file_uri('/images/box-corner.svg') ?>" alt=""
-            class="feature--box-corner-top-left">
-          <img src="<?php echo get_theme_file_uri('/images/box-corner.svg') ?>" alt=""
-            class="feature--box-corner-top-right">
-          <img src="<?php echo get_theme_file_uri('/images/box-corner.svg') ?>" alt=""
-            class="feature--box-corner-bottom-left">
-          <img src="<?php echo get_theme_file_uri('/images/box-corner.svg') ?>" alt=""
-            class="feature--box-corner-bottom-right">
-          <img src="<?php echo get_theme_file_uri('/images/grid-bg.png') ?>" alt="" class="absolute w-full grid-bg">
-          <div class="feature-box--content">
-            <img src="<?php echo get_theme_file_uri('/images/icon--deploy.svg') ?>" alt="" width="72" height="72" class="mb-10">
+        
+        <div class="bg-gradient-to-br from-[#12051e] to-[#030307] border-[#14152b] relative w-full" data-sal="slide-left" data-sal-duration="600">
+          <img src={boxCornerUrl} alt="box corner decoration"
+            class="absolute -top-[3px] -left-[3px]">
+          <img src={boxCornerUrl} alt="box corner decoration"
+            class="absolute -top-[3px] -right-[3px] -scale-x-100">
+          <img src={boxCornerUrl} alt="box corner decoration"
+            class="absolute -bottom-[3px] -left-[3px] -scale-y-100">
+          <img src={boxCornerUrl} alt="box corner decoration"
+            class="absolute -bottom-[3px] -right-[3px] -scale-y-100 -scale-x-100">
+          <Image src={GridBG} alt="" class="absolute w-full z-10"/>
+          <div class="p-10 z-20 relative">
+            <Image src={iconDeployUrl} alt="" width="72" height="72" class="mb-10"/>
             <div>
-              <h4 class="mb-4 font-semibold text-2xl">Device-based</br>filtering</h4>
+              <h4 class="mb-4 font-semibold text-2xl font-monospace">Device-based</br>filtering</h4>
               <p class="text-lg">No DNS changes or reporting required. (Hallelujah!!) Save up to 45 minutes per installation.</p>
             </div>
           </div>
         </div>
-        <div class="feature-box relative w-full" data-sal="slide-left" data-sal-duration="600" data-sal-delay="200">
-          <img src="<?php echo get_theme_file_uri('/images/box-corner.svg') ?>" alt=""
-            class="feature--box-corner-top-left">
-          <img src="<?php echo get_theme_file_uri('/images/box-corner.svg') ?>" alt=""
-            class="feature--box-corner-top-right">
-          <img src="<?php echo get_theme_file_uri('/images/box-corner.svg') ?>" alt=""
-            class="feature--box-corner-bottom-left">
-          <img src="<?php echo get_theme_file_uri('/images/box-corner.svg') ?>" alt=""
-            class="feature--box-corner-bottom-right">
-          <img src="<?php echo get_theme_file_uri('/images/grid-bg.png') ?>" alt="" class="absolute w-full grid-bg">
-          <div class="feature-box--content">
-            <img src="<?php echo get_theme_file_uri('/images/icon--support.svg') ?>" alt="" width="72" height="72" class="mb-10">
+
+        <div class="bg-gradient-to-br from-[#12051e] to-[#030307] border-[#14152b] relative w-full" data-sal="slide-left" data-sal-duration="600">
+          <img src={boxCornerUrl} alt="box corner decoration"
+            class="absolute -top-[3px] -left-[3px]">
+          <img src={boxCornerUrl} alt="box corner decoration"
+            class="absolute -top-[3px] -right-[3px] -scale-x-100">
+          <img src={boxCornerUrl} alt="box corner decoration"
+            class="absolute -bottom-[3px] -left-[3px] -scale-y-100">
+          <img src={boxCornerUrl} alt="box corner decoration"
+            class="absolute -bottom-[3px] -right-[3px] -scale-y-100 -scale-x-100">
+          <Image src={GridBG} alt="" class="absolute w-full z-10"/>
+          <div class="p-10 z-20 relative">
+            <Image src={iconSupportUrl} alt="" width="72" height="72" class="mb-10"/>
             <div>
-              <h4 class="mb-4 font-semibold text-2xl">Easy to deploy</br>and use</h4>
-              <p class="text-lg">Spend less time learning and managing a new tool — and more time focused on your clients’ success. </p>
+              <h4 class="mb-4 font-semibold text-2xl font-monospace">Easy to deploy</br>and use</h4>
+              <p class="text-lg">Spend less time learning and managing a new tool — and more time focused on your clients’ success.</p>
             </div>
           </div>
         </div>
-        <div class="feature-box relative w-full" data-sal="slide-left" data-sal-duration="600" data-sal-delay="400">
-          <img src="<?php echo get_theme_file_uri('/images/box-corner.svg') ?>" alt=""
-            class="feature--box-corner-top-left">
-          <img src="<?php echo get_theme_file_uri('/images/box-corner.svg') ?>" alt=""
-            class="feature--box-corner-top-right">
-          <img src="<?php echo get_theme_file_uri('/images/box-corner.svg') ?>" alt=""
-            class="feature--box-corner-bottom-left">
-          <img src="<?php echo get_theme_file_uri('/images/box-corner.svg') ?>" alt=""
-            class="feature--box-corner-bottom-right">
-          <img src="<?php echo get_theme_file_uri('/images/grid-bg.png') ?>" alt="" class="absolute w-full grid-bg">
-          <div class="feature-box--content">
-            <img src="<?php echo get_theme_file_uri('/images/clock-icon.png') ?>" alt="" width="72" height="72" class="mb-10">
+
+        <div class="bg-gradient-to-br from-[#12051e] to-[#030307] border-[#14152b] relative w-full" data-sal="slide-left" data-sal-duration="600">
+          <img src={boxCornerUrl} alt="box corner decoration"
+            class="absolute -top-[3px] -left-[3px]">
+          <img src={boxCornerUrl} alt="box corner decoration"
+            class="absolute -top-[3px] -right-[3px] -scale-x-100">
+          <img src={boxCornerUrl} alt="box corner decoration"
+            class="absolute -bottom-[3px] -left-[3px] -scale-y-100">
+          <img src={boxCornerUrl} alt="box corner decoration"
+            class="absolute -bottom-[3px] -right-[3px] -scale-y-100 -scale-x-100">
+          <Image src={GridBG} alt="" class="absolute w-full z-10"/>
+          <div class="p-10 z-20 relative">
+            <Image src={iconClockUrl} alt="clock icon" class="mb-10 w-[72px] h-[72px]"/>
             <div>
-              <h4 class="mb-4 font-semibold text-2xl">Get in.</br>Get out.</h4>
-              <p class="text-lg">Our global policy makes it easy to make mass changes and manage all of your customers at once. </p>
+              <h4 class="mb-4 font-semibold text-2xl font-monospace">Get in.</br>Get out.</h4>
+              <p class="text-lg">Our global policy makes it easy to make mass changes and manage all of your customers at once.</p>
             </div>
           </div>
         </div>
+
+
       </div>
     </div>
-  </section>
+  </Section>
 
-  <section>
+  <Section>
     <div class="container mx-auto max-w-7xl px-4 md:px-6">
       <div class="testimonial-block relative">
         <img src="<?php echo get_theme_file_uri('/images/abstract-wave.svg') ?>" alt="abstract wave"
           class="absolute bottom-0 end-0 testimonial--bg-img">
-        <h2 class="font-semibold">“Zorus is straightforward and simple. I did my due diligence with WebTitan and I
+        <h2 class="font-semibold font-monospace">“Zorus is straightforward and simple. I did my due diligence with WebTitan and I
           thought I knew it, but there were so many gotchas! Zorus is clean and just works."</h2>
         <div class="testimonial--profile flex items-center relative z-3">
           <img src="<?php echo get_theme_file_uri('/images/luc-cole-min.png') ?>" alt="Mike Giovaninni, Netwerks"
@@ -228,9 +248,9 @@
         </div>
       </div>
     </div>
-  </section>
+  </Section>
 
-  <section>
+  <Section>
     <div class="container mx-auto max-w-7xl px-4 md:px-6">
       <div class="flex">
         <div class="w-full lg:w-8/12 col mx-auto text-center">
@@ -253,7 +273,7 @@
             <img src="<?php echo get_theme_file_uri('/images/icon--endpoint-protection.svg') ?>" alt="icon"
               class="mb-10 md:mb-0" width="72" height="72">
             <div>
-              <h4 class="mb-2 text-2xl font-semibold">Protect clients from bad actors</h4>
+              <h4 class="mb-2 text-2xl font-semibold font-monospace">Protect clients from bad actors</h4>
               <p class="text-lg">Get detailed reports you can share with clients about potential breaches and
                 threats. Prove your value by demonstrating the risks they face every day.</p>
             </div>
@@ -266,7 +286,7 @@
             <img src="<?php echo get_theme_file_uri('/images/icon--identify.svg') ?>" alt="icon" class="mb-10 md:mb-0"
               width="72" height="72">
             <div>
-              <h4 class="mb-2 text-2xl font-semibold">Keep ‘em in compliance</h4>
+              <h4 class="mb-2 text-2xl font-semibold font-monospace">Keep ‘em in compliance</h4>
               <p class="text-lg">Get complete visibility into all of the tech in your client’s environment. Easily
                 spot Shadow IT. Ensure every tool complies with programs like HIPAA, CMMC, etc.</p>
             </div>
@@ -279,7 +299,7 @@
             <img src="<?php echo get_theme_file_uri('/images/icon--revenue-growth.svg') ?>" alt="icon"
               class="mb-10 md:mb-0" width="72" height="72">
             <div>
-              <h4 class="mb-2 text-2xl font-semibold">Maximize their tech ROI</h4>
+              <h4 class="mb-2 text-2xl font-semibold font-monospace">Maximize their tech ROI</h4>
               <p class="text-lg">Help clients save money on unnecessary licenses. Show clients which tools are
                 adding to their productivity — and which they’re just wasting money on.</p>
             </div>
@@ -287,10 +307,10 @@
         </div>
       </div>
     </div>
-  </section>
+  </Section>
 
 
-  <section>
+  <Section>
     <div class="container mx-auto max-w-7xl px-4 md:px-6">
       <div class="mx-auto text-center mb-10 md:mb-20">
         <h2 class="font-monospace font-semibold text-4xl leading-tight md:leading-tight">
@@ -302,7 +322,7 @@
       <!--- Part 1 --->
       <div class="grid grid-cols-1 md:grid-cols-2 items-center space-y-10 md:space-y-0 md:gap-x-20 pb-20">
         <div class="flex flex-col justify-items-center relative">
-          <h2 class="mb-6 font-semibold text-3xl md:max-w-lg">
+          <h2 class="mb-6 font-semibold text-3xl font-monospace max-w-lg">
             Plays nice with the tools you use every day
           </h2>
           <div class="border-l-2 pl-6 border-[#00f0ff] mb-6 md:max-w-lg">
@@ -397,7 +417,7 @@
             class="w-full" />
         </div>
         <div class="lg:w-10/12 flex flex-col justify-items-center relative ml-auto order-1 md:order-2">
-          <h2 class="mb-6 font-semibold text-3xl md:max-w-lg">
+          <h2 class="mb-6 font-semibold text-3xl font-monospace max-w-lg">
             Fast, friendly U.S.</br>-based support
           </h2>
           <div class="border-l-2 pl-6 border-[#00f0ff] mb-6 md:max-w-lg">
@@ -419,18 +439,18 @@
         </div>
       </div>
     </div>
-  </section>
+  </Section>
 
-  <section class="arrow right overflow-visible">
+  <Section class="arrow right overflow-visible">
     <img src="<?php echo get_theme_file_uri('/images/arrow.svg') ?>" alt="" role="presentation" class="w-full" />
-  </section>
+  </Section>
 
-  <section>
+  <Section>
     <div class="container mx-auto max-w-7xl px-4 md:px-6">
         <div class="testimonial-block relative">
           <img src="<?php echo get_theme_file_uri('/images/abstract-wave.svg') ?>" alt="abstract wave"
             class="absolute bottom-0 end-0 testimonial--bg-img">
-          <h2 class="font-semibold">“Zorus support people are always a pleasure to work with. It’s not like that with
+          <h2 class="font-semibold font-monospace">“Zorus support people are always a pleasure to work with. It’s not like that with
             the big software players. With Zorus, if I open a ticket, they’re on it."</h2>
           <div class="testimonial--profile flex items-center relative z-3">
             <img src="<?php echo get_theme_file_uri('/images/sean-lange.png') ?>" alt="Mike Giovaninni, Netwerks"
@@ -443,14 +463,14 @@
           </div>
         </div>
     </div>
-  </section>
+  </Section>
 
-  <section>
+  <Section>
     <div class="container mx-auto max-w-7xl px-4 md:px-6">
       <!--- Part 1 --->
       <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-y-10 md:gap-y-0 md:gap-x-20 pb-20">
         <div class="flex flex-col justify-items-center relative">
-          <h2 class="mb-6 font-semibold text-3xl md:max-w-lg">
+          <h2 class="mb-6 font-semibold text-3xl font-monospace max-w-lg">
             Brandable block pages, portal and more
           </h2>
           <div class="border-l-2 pl-6 border-[#00f0ff] mb-6 md:max-w-lg">
@@ -481,7 +501,7 @@
             class="w-full" />
         </div>
         <div class="flex flex-col justify-items-center relative ml-auto order-1 md:order-2">
-          <h2 class="mb-6 font-semibold text-3xl md:max-w-lg">
+          <h2 class="mb-6 font-semibold text-3xl font-monospace max-w-lg">
             Tools to promote<br />YOUR business
           </h2>
           <div class="border-l-2 pl-6 border-[#00f0ff] mb-6 md:max-w-lg">
@@ -503,7 +523,7 @@
       <!--- Part 3 --->
       <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-y-10 md:gap-y-0 md:gap-x-20 pt-0 md:py-20">
         <div class="flex flex-col justify-items-center relative">
-          <h2 class="mb-6 font-semibold text-3xl md:max-w-xl">
+          <h2 class="mb-6 font-semibold font-monospace text-3xl max-w-xl">
             Leaders, developers and engineers who care (for real)
           </h2>
           <div class="border-l-2 pl-6 border-[#00f0ff] mb-6 md:max-w-lg">
@@ -526,21 +546,21 @@
             class="w-full" />
         </div>
       </div>
-  </section>
+    </Section>
 
   <!------------------- ARROW SECTION --------------------->
-  <section class="arrow left overflow-visible">
+  <Section class="arrow left overflow-visible">
     <div>
       <img src="<?php echo get_theme_file_uri('/images/arrow.svg') ?>" alt="" role="presentation" />
     </div>
-  </section>
+  </Section>
 
-  <section>
+  <Section>
     <div class="container mx-auto max-w-7xl px-4 md:px-6">
         <div class="testimonial-block relative">
           <img src="<?php echo get_theme_file_uri('/images/abstract-wave.svg') ?>" alt="abstract wave"
             class="absolute bottom-0 end-0 testimonial--bg-img">
-          <h2 class="font-semibold">“Zorus is the kind of vendor that is really your partner. They’re there to help
+          <h2 class="font-semibold font-monospace">“Zorus is the kind of vendor that is really your partner. They’re there to help
             you.”</h2>
           <div class="testimonial--profile flex items-center relative z-3">
             <img src="<?php echo get_theme_file_uri('/images/lisa-niekamp-urwin.png') ?>"
@@ -553,10 +573,10 @@
           </div>
         </div>
     </div>
-  </section>
+  </Section>
 
   <!---------- YOUTUBE SECTION ------------->
-  <section>
+  <Section>
     <div class="container mx-auto max-w-7xl px-4 md:px-6">
       <h2 class="lg:w-1/2 text-center mx-auto mb-6 font-monospace font-semibold text-4xl leading-tight md:leading-tight">See how Zorus transformed this MSP's business</h2>
       <div class="md:w-11/12 lg:w-5/12 mx-auto text-center mb-10">
@@ -571,7 +591,7 @@
           allowfullscreen></iframe>
       </div>
     </div>
-  </section>
+  </Section>
 
 </main>
 
@@ -595,4 +615,4 @@
   </div>
 </aside>
 
-<?php get_footer()?>
+</Layout>

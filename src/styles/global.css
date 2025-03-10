@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
----
-import '../styles/global';
----
+:root {
+  --primary-color: #12051e;
+  --secondary-color: #030307;
+  --heading-primary: #eee;
+  --body-text: #b6c8dd;
+  --heading-font-size: 2rem; /* Example: can use Tailwind's font-size values */
+  --body-font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #eee;
+}
+
+p {
+  color: var(--body-text);
+}
+
+.font-monospace {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+}
