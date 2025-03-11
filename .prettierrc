@@ -1,11 +1,13 @@
 {
   "plugins": ["prettier-plugin-tailwindcss", "prettier-plugin-astro"],
+  "pluginSearchDirs": ["."],
   "astroAllowShorthand": false,
   "overrides": [
     {
       "files": "*.astro",
       "options": {
-        "parser": "astro"
+        "parser": "astro",
+        "tailwindAttributes": ["class"]
       }
     }
   ]

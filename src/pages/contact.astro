@@ -1,4 +1,6 @@
 ---
+const pageTitle = "Zorus | Filtering & CyberSight";
+
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Section from "../components/Section.astro";
@@ -22,8 +24,7 @@ import iconScalingUrl from "../assets/icon--scaling.svg?url";
 import iconSupportUrl from "../assets/icon--support.svg?url";
 ---
 
-<!--------------- MAIN SECTION ------------------>
-<Layout>
+<Layout title={pageTitle}>
   <main class="overflow-x-hidden">
     <Section class="hero relative">
       <div
@@ -157,16 +158,17 @@ import iconSupportUrl from "../assets/icon--support.svg?url";
         <div class="flex">
           <div class="w-full mx-auto text-center mb-8">
             <h2
-              class="font-monospace font-semibold text-4xl mb-6 w-full mx-auto md:max-w-xl lg:max-w-4xl md:leading-tight text-center leading-tight"
+              class="font-monospace font-semibold text-4xl mb-6 w-full mx-auto md:max-w-xl lg:max-w-3xl md:leading-tight text-center leading-tight"
             >
-              Trusted by cyber security experts. Leading the way in DNS
+              Trusted by cybersecurity experts. Leading the way in DNS
               protection.
             </h2>
             <div class="h-0.5 max-w-40 bg-[#00f0ff] my-6 mx-auto"></div>
           </div>
         </div>
+
         <div
-          class="flex flex-col mx-auto gap-y-10 gap-x-10 items-center justify-center md:flex-row md:w-2/3 md:flex-wrap lg:w-full"
+          class="md:flex-wrap flex flex-col mx-auto gap-y-10 gap-x-10 items-center justify-center md:flex-row md:w-2/3 lg:w-full"
         >
           <Image
             src={ChannelProgramQ12024}

@@ -59,7 +59,7 @@ const Navbar = () => {
               onMouseEnter={() => setOpenDropdown("compare")}
               onMouseLeave={() => setOpenDropdown(false)}
             >
-              <p className="font-monospace text-base font-semibold text-white transition delay-150 ease-in-out hover:text-[#00f0ff]">
+              <p className="font-monospace text-base font-semibold text-white transition duration-300 ease-in-out hover:text-[#00f0ff]">
                 Compare
               </p>
               <button className="shrink-0">
@@ -77,12 +77,18 @@ const Navbar = () => {
               </button>
               {/* 2nd level menu */}
               {openDropdown === "compare" && (
-                <ul className="absolute left-1/2 top-11 min-w-[240px] origin-top-right -translate-x-1/2 rounded-lg bg-gradient-to-b from-[#05B4F4] to-[#660DAB] p-px shadow-xl">
+                <ul
+                  className={`absolute left-1/2 top-11 min-w-[240px] origin-top-right -translate-x-1/2 rounded-lg bg-gradient-to-b from-[#05B4F4] to-[#660DAB] p-px shadow-xl transition-all duration-300 ${
+                    openDropdown === "compare"
+                      ? "pointer-events-auto translate-y-0 opacity-100"
+                      : "pointer-events-none -translate-y-2 opacity-0"
+                  }`}
+                >
                   <div className="dropdown-nav-bg space-y-6 overflow-hidden rounded-lg p-8">
                     <li>
                       <a
                         href="/zorus-vs-cisco-umbrella"
-                        className="font-monospace text-base font-semibold uppercase text-white transition delay-150 ease-in-out hover:text-[#00f0ff]"
+                        className="font-monospace text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]"
                       >
                         Cisco Umbrella
                       </a>
@@ -90,7 +96,7 @@ const Navbar = () => {
                     <li>
                       <a
                         href="/zorus-vs-dnsfilter"
-                        className="font-monospace text-base font-semibold uppercase text-white transition delay-150 ease-in-out hover:text-[#00f0ff]"
+                        className="font-monospace text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]"
                       >
                         DNSFilter
                       </a>
@@ -98,7 +104,7 @@ const Navbar = () => {
                     <li>
                       <a
                         href="/zorus-vs-webroot"
-                        className="font-monospace text-base font-semibold uppercase text-white transition delay-150 ease-in-out hover:text-[#00f0ff]"
+                        className="font-monospace text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]"
                       >
                         WebRoot DNS
                       </a>
@@ -106,7 +112,7 @@ const Navbar = () => {
                     <li>
                       <a
                         href="/zorus-vs-webtitan"
-                        className="font-monospace text-base font-semibold uppercase text-white transition delay-150 ease-in-out hover:text-[#00f0ff]"
+                        className="font-monospace text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]"
                       >
                         WebTitan
                       </a>
@@ -114,7 +120,7 @@ const Navbar = () => {
                     <li>
                       <a
                         href="/zorus-vs-competitors"
-                        className="font-monospace text-base font-semibold uppercase text-white transition delay-150 ease-in-out hover:text-[#00f0ff]"
+                        className="font-monospace text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]"
                       >
                         Compare All
                       </a>
@@ -126,7 +132,7 @@ const Navbar = () => {
             <li className="lg:py-3">
               <a
                 href="/about"
-                className="font-monospace text-base font-semibold uppercase text-white transition delay-150 ease-in-out hover:text-[#00f0ff]"
+                className="font-monospace text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]"
               >
                 About
               </a>
@@ -134,7 +140,7 @@ const Navbar = () => {
             <li className="lg:py-3">
               <a
                 href="/referrals"
-                className="font-monospace text-base font-semibold uppercase text-white transition delay-150 ease-in-out hover:text-[#00f0ff]"
+                className="font-monospace text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]"
               >
                 Referrals
               </a>
@@ -144,7 +150,7 @@ const Navbar = () => {
               onMouseEnter={() => setOpenDropdown("resources")}
               onMouseLeave={() => setOpenDropdown(false)}
             >
-              <p className="font-monospace text-base font-semibold uppercase text-white transition delay-150 ease-in-out hover:text-[#00f0ff]">
+              <p className="font-monospace text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]">
                 Resources
               </p>
               <button className="shrink-0">
@@ -162,12 +168,18 @@ const Navbar = () => {
               </button>
               {/* 2nd level menu */}
               {openDropdown === "resources" && (
-                <ul className="absolute left-1/2 top-10 min-w-[240px] origin-top-right -translate-x-1/2 rounded-lg bg-gradient-to-b from-[#05B4F4] to-[#660DAB] p-px shadow-xl">
+                <ul
+                  className={`absolute left-1/2 top-11 min-w-[240px] origin-top-right -translate-x-1/2 rounded-lg bg-gradient-to-b from-[#05B4F4] to-[#660DAB] p-px shadow-xl transition-all duration-300 ${
+                    openDropdown === "resources"
+                      ? "pointer-events-auto translate-y-0 opacity-100"
+                      : "pointer-events-none -translate-y-2 opacity-0"
+                  }`}
+                >
                   <div className="dropdown-nav-bg space-y-6 rounded-lg p-8">
                     <li>
                       <a
                         href="/blog"
-                        className="font-monospace text-base font-semibold uppercase text-white transition delay-150 ease-in-out hover:text-[#00f0ff]"
+                        className="font-monospace text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]"
                       >
                         Blog
                       </a>
@@ -175,7 +187,7 @@ const Navbar = () => {
                     <li>
                       <a
                         href="/webinars"
-                        className="font-monospace text-base font-semibold uppercase text-white transition delay-150 ease-in-out hover:text-[#00f0ff]"
+                        className="font-monospace text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]"
                       >
                         Webinars
                       </a>
@@ -183,7 +195,7 @@ const Navbar = () => {
                     <li>
                       <a
                         href="/events"
-                        className="font-monospace text-base font-semibold uppercase text-white transition delay-150 ease-in-out hover:text-[#00f0ff]"
+                        className="font-monospace text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]"
                       >
                         Events
                       </a>
@@ -191,7 +203,7 @@ const Navbar = () => {
                     <li>
                       <a
                         href="/between-two-keyboards"
-                        className="font-monospace text-base font-semibold uppercase text-white transition delay-150 ease-in-out hover:text-[#00f0ff]"
+                        className="font-monospace text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]"
                       >
                         Between Two Keyboards
                       </a>
@@ -199,7 +211,7 @@ const Navbar = () => {
                     <li>
                       <a
                         href="/resources"
-                        className="font-monospace text-base font-semibold uppercase text-white transition delay-150 ease-in-out hover:text-[#00f0ff]"
+                        className="font-monospace text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]"
                       >
                         All Resources
                       </a>

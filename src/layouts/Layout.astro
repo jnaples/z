@@ -1,8 +1,9 @@
 ---
 import "../styles/global.css";
 
+const { title } = Astro.props;
 import PreHeader from "../components/PreHeader.astro";
-import HeaderDarkMode from "../components/HeaderDarkMode";
+import NavBar from "../components/NavBar";
 ---
 
 <!doctype html>
@@ -15,14 +16,14 @@ import HeaderDarkMode from "../components/HeaderDarkMode";
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-    <title>Astro Basics</title>
+    <title>{title || "Zorus | Filtering & CyberSight"}</title>
   </head>
   <body class="bg-gradient-to-br from-[#12041F] to-[#030206]">
     <PreHeader />
-    <HeaderDarkMode client:load />
+    <NavBar client:load />
     <slot />
   </body>
 </html>
