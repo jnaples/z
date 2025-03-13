@@ -4,7 +4,11 @@ import "../../src/styles/global.css";
 
 const Navbar = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
+
+  const toggleDropdown = (dropdownName) => {
+    setOpenDropdown((prev) => (prev === dropdownName ? null : dropdownName)); // Toggle logic
+  };
 
   return (
     <>
@@ -235,16 +239,24 @@ const Navbar = () => {
 
         {/* Mobile component */}
         {openMobileMenu && (
-          <div
-            className="fixed inset-0 z-20 bg-white/15 backdrop-blur-sm"
-            onClick={() => setOpenMobileMenu(false)}
-          >
+          <div className="lg:hidden" role="dialog">
+            {/*  Background backdrop, show/hide based on slide-over state. */}
+            <div
+              className="fixed inset-0 z-20 bg-white/15 backdrop-blur-sm"
+              onClick={() => setOpenMobileMenu(false)}
+            ></div>
+            {/* Mobile menu */}
             <div className="fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-gradient-to-br from-[#0a022d] via-[#150423] to-[#030207] px-6 py-6 text-white sm:max-w-sm">
               <div className="flex items-center justify-between">
                 <a href="/" className="-m-1.5 p-1.5">
                   <span className="sr-only">Zorus</span>
-                  <img className="h-8 w-auto" src={LogoDarkMode} alt="logo" />
+                  <img
+                    className="h-10 w-auto"
+                    src={LogoDarkMode}
+                    alt="Zorus logo"
+                  />
                 </a>
+                {/*  Close button */}
                 <button
                   type="button"
                   className="-m-2.5 rounded-md p-2.5 text-[#B5C7DD]"
@@ -255,17 +267,190 @@ const Navbar = () => {
                     className="size-6"
                     fill="none"
                     viewBox="0 0 24 24"
-                    strokeWidth="1.5"
+                    stroke-width="1.5"
                     stroke="currentColor"
                     aria-hidden="true"
+                    data-slot="icon"
                   >
                     <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M6..."
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18 18 6M6 6l12 12"
                     />
                   </svg>
                 </button>
+              </div>
+              <div className="mt-6 flow-root">
+                <div>
+                  <ul className="text-sm font-medium">
+                    <li
+                      className="relative flex flex-col"
+                      onClick={() => toggleDropdown("compare")}
+                    >
+                      <div className="flex cursor-pointer items-center space-x-2.5">
+                        <p className="font-monospace block rounded-lg py-2.5 text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]">
+                          Compare
+                        </p>
+                        <button className="shrink-0 p-1">
+                          <span className="sr-only">
+                            Show submenu for "Compare products"
+                          </span>
+                          <svg
+                            className="h-3 w-3 fill-[#00f0ff]"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="12"
+                            height="12"
+                          >
+                            <path d="M10 2.586 11.414 4 6 9.414.586 4 2 2.586l4 4z" />
+                          </svg>
+                        </button>
+                      </div>
+                      {/* Drodown menu Compare */}
+                      {openDropdown === "compare" && (
+                        <ul className="rounded-lg bg-gradient-to-b from-[#05B4F4] to-[#660DAB] p-px shadow-xl transition-all duration-300">
+                          <div className="dropdown-nav-bg space-y-6 overflow-hidden rounded-lg p-8">
+                            <li>
+                              <a
+                                href="/zorus-vs-cisco-umbrella"
+                                className="font-monospace text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]"
+                              >
+                                Cisco Umbrella
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="/zorus-vs-dnsfilter"
+                                className="font-monospace text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]"
+                              >
+                                DNSFilter
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="/zorus-vs-webroot"
+                                className="font-monospace text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]"
+                              >
+                                WebRoot DNS
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="/zorus-vs-webtitan"
+                                className="font-monospace text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]"
+                              >
+                                WebTitan
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="/zorus-vs-competitors"
+                                className="font-monospace text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]"
+                              >
+                                Compare All
+                              </a>
+                            </li>
+                          </div>
+                        </ul>
+                      )}
+                    </li>
+                    <li>
+                      <a
+                        className="font-monospace block rounded-lg py-2.5 font-semibold uppercase text-white"
+                        href="/about"
+                      >
+                        About
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="font-monospace block rounded-lg py-2.5 font-semibold uppercase text-white"
+                        href="/referrals"
+                      >
+                        Referrals
+                      </a>
+                    </li>
+                    <li
+                      className="relative flex flex-col"
+                      onClick={() => toggleDropdown("resources")}
+                    >
+                      <div className="flex items-center space-x-2.5">
+                        <p className="font-monospace block rounded-lg py-2.5 text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]">
+                          Resources
+                        </p>
+                        <button className="shrink-0 p-1">
+                          <span className="sr-only">
+                            Show submenu for "Compare products"
+                          </span>
+                          <svg
+                            className="h-3 w-3 fill-[#00f0ff]"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="12"
+                            height="12"
+                          >
+                            <path d="M10 2.586 11.414 4 6 9.414.586 4 2 2.586l4 4z" />
+                          </svg>
+                        </button>
+                      </div>
+                      {/* Drodown menu Resources */}
+                      {openDropdown === "resources" && (
+                        <ul className="rounded-lg bg-gradient-to-b from-[#05B4F4] to-[#660DAB] p-px shadow-xl transition-all duration-300">
+                          <div className="dropdown-nav-bg relative z-20 space-y-6 overflow-hidden rounded-lg p-8">
+                            <li>
+                              <a
+                                href="/blog"
+                                className="font-monospace text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]"
+                              >
+                                Blog
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="/webinars"
+                                className="font-monospace text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]"
+                              >
+                                Webinars
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="/events"
+                                className="font-monospace text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]"
+                              >
+                                Events
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="/between-two-keyboards"
+                                className="font-monospace text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]"
+                              >
+                                Between Two Keyboards
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="/resources"
+                                className="font-monospace text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]"
+                              >
+                                All Resources
+                              </a>
+                            </li>
+                          </div>
+                        </ul>
+                      )}
+                    </li>
+                  </ul>
+                  <div className="mt-3 border-t border-white/10 pt-7">
+                    <a
+                      href="/book-a-live-demo"
+                      className="text-sm/6 font-semibold text-[#00f0ff]"
+                    >
+                      <button className="btn glitch w-full border-2 border-[#00f0ff] px-6 py-2.5 shadow-[0_0_10px_#00f0ff]">
+                        BOOK A DEMO
+                      </button>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
