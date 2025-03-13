@@ -1,33 +1,34 @@
 import { useState } from "react";
+import LogoLightMode from "../../public/logo--zorus--dark.svg?url";
 import LogoDarkMode from "../../public/logo--zorus--white.svg?url";
 import "../../src/styles/global.css";
 
-const Navbar = () => {
+const NavbarLightMode = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
 
   const toggleDropdown = (dropdownName) => {
-    setOpenDropdown((prev) => (prev === dropdownName ? null : dropdownName)); // Toggle logic
+    setOpenDropdown((prev) => (prev === dropdownName ? null : dropdownName));
   };
 
   return (
     <>
       <header className="container sticky top-5 z-50 mx-auto max-w-7xl px-4 md:px-6">
         <nav
-          className="relative z-10 flex items-center justify-between rounded-md border border-white/5 bg-white/5 px-5 py-2 ring-1 ring-slate-950/25 backdrop-blur-2xl"
+          className="relative z-10 flex items-center justify-between rounded-md border border-white/5 bg-slate-600/5 px-5 py-2 ring-1 ring-slate-950/25 backdrop-blur-2xl"
           aria-label="Global"
         >
-          <div className="absolute left-1.5 top-1.5 size-[3px] rounded-full bg-white/25"></div>
-          <div className="absolute bottom-1.5 left-1.5 size-[3px] rounded-full bg-white/25"></div>
-          <div className="absolute right-1.5 top-1.5 size-[3px] rounded-full bg-white/25"></div>
-          <div className="absolute bottom-1.5 right-1.5 size-[3px] rounded-full bg-white/25"></div>
+          <div className="absolute left-1.5 top-1.5 size-[3px] rounded-full bg-slate-950/25"></div>
+          <div className="absolute bottom-1.5 left-1.5 size-[3px] rounded-full bg-slate-950/25"></div>
+          <div className="absolute right-1.5 top-1.5 size-[3px] rounded-full bg-slate-950/25"></div>
+          <div className="absolute bottom-1.5 right-1.5 size-[3px] rounded-full bg-slate-950/25"></div>
 
           <div className="flex lg:flex-1">
             <a href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Zorus</span>
               <img
                 className="h-10 w-auto"
-                src={LogoDarkMode}
+                src={LogoLightMode}
                 alt="Zorus logo"
               />
             </a>
@@ -40,12 +41,13 @@ const Navbar = () => {
             >
               <span className="sr-only">Open main menu</span>
               <svg
-                className="size-6 text-[#00f0ff]"
+                className="size-6 text-[#041342]"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
                 aria-hidden="true"
+                data-slot="icon"
               >
                 <path
                   strokeLinecap="round"
@@ -63,7 +65,7 @@ const Navbar = () => {
               onMouseEnter={() => setOpenDropdown("compare")}
               onMouseLeave={() => setOpenDropdown(false)}
             >
-              <p className="font-monospace text-base font-semibold text-white transition duration-300 ease-in-out hover:text-[#00f0ff]">
+              <p className="font-monospace text-base font-semibold !text-[#041342] transition duration-300 ease-in-out hover:text-[#00f0ff]">
                 Compare
               </p>
               <button className="shrink-0">
@@ -136,7 +138,7 @@ const Navbar = () => {
             <li className="lg:py-3">
               <a
                 href="/about"
-                className="font-monospace text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]"
+                className="font-monospace text-base font-semibold uppercase !text-[#041342] transition duration-300 ease-in-out hover:text-[#00f0ff]"
               >
                 About
               </a>
@@ -144,7 +146,7 @@ const Navbar = () => {
             <li className="lg:py-3">
               <a
                 href="/referrals"
-                className="font-monospace text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]"
+                className="font-monospace text-base font-semibold uppercase !text-[#041342] transition duration-300 ease-in-out hover:text-[#00f0ff]"
               >
                 Referrals
               </a>
@@ -154,7 +156,7 @@ const Navbar = () => {
               onMouseEnter={() => setOpenDropdown("resources")}
               onMouseLeave={() => setOpenDropdown(false)}
             >
-              <p className="font-monospace text-base font-semibold uppercase text-white transition duration-300 ease-in-out hover:text-[#00f0ff]">
+              <p className="font-monospace text-base font-semibold uppercase !text-[#041342] transition duration-300 ease-in-out hover:text-[#00f0ff]">
                 Resources
               </p>
               <button className="shrink-0">
@@ -230,7 +232,7 @@ const Navbar = () => {
               href="/book-a-live-demo"
               className="text-sm/6 font-semibold text-[#00f0ff]"
             >
-              <button className="font-monospace btn glitch border-2 border-[#00f0ff] px-6 py-2.5 font-semibold shadow-[0_0_10px_#00f0ff]">
+              <button className="font-monospace btn glitch bg-[#00f0ff] px-6 py-2.5 font-semibold text-[#041342] shadow-[0_0_10px_#00f0ff]">
                 BOOK A DEMO
               </button>
             </a>
@@ -273,8 +275,8 @@ const Navbar = () => {
                     data-slot="icon"
                   >
                     <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
                       d="M6 18 18 6M6 6l12 12"
                     />
                   </svg>
@@ -460,4 +462,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarLightMode;
