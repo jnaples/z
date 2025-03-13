@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --primary-color: #12051e;
+  --neon-blue: #00f0ff --primary-color: #041242;
   --secondary-color: #030307;
   --heading-primary: #eee;
   --body-text: #b6c8dd;
@@ -34,8 +34,323 @@ p {
   background: center center / contain no-repeat;
 }
 
+/******** Nav dropdown background ********/
+
 .dropdown-nav-bg {
   background:
     var(--triangle-bg) center center / contain no-repeat,
     linear-gradient(rgb(23, 23, 23), rgb(9, 9, 9) 90%);
+}
+
+/******** Button animations ********/
+.glitch {
+  position: relative;
+}
+
+.glitch:hover {
+  text-shadow: -1px 0 yellow;
+  background: #06efff;
+  color: #041242;
+}
+.glitch:hover::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 1s infinite linear alternate-reverse;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  padding: inherit;
+  font-size: inherit;
+  border: inherit;
+  background: inherit;
+  color: inherit;
+  box-sizing: border-box;
+}
+.glitch:hover:before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 0.2s infinite linear alternate-reverse;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  padding: inherit;
+  font-size: inherit;
+  border: inherit;
+  background: inherit;
+  color: inherit;
+  box-sizing: border-box;
+}
+
+@keyframes noise-anim {
+  0% {
+    clip: rect(29px, 9999px, 33px, 0);
+    transform: translateX(-3px) translateY(1px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(3px, 9999px, 5px, 0);
+    transform: translateX(-2px) translateY(1px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(22px, 9999px, 26px, 0);
+    transform: translateX(-8px) translateY(2px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(22px, 9999px, 26px, 0);
+    transform: translateX(-2px) translateY(2px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(1px, 9999px, 9px, 0);
+    transform: translateX(-6px) translateY(2px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(25px, 9999px, 31px, 0);
+    transform: translateX(-2px) translateY(1px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(24px, 9999px, 25px, 0);
+    transform: translateX(-5px) translateY(1px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(27px, 9999px, 32px, 0);
+    transform: translateX(-8px) translateY(2px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(23px, 9999px, 25px, 0);
+    transform: translateX(-2px) translateY(2px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(14px, 9999px, 21px, 0);
+    transform: translateX(-2px) translateY(1px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(18px, 9999px, 25px, 0);
+    transform: translateX(-2px) translateY(2px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(17px, 9999px, 26px, 0);
+    transform: translateX(-7px) translateY(2px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(2px, 9999px, 8px, 0);
+    transform: translateX(-1px) translateY(2px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(14px, 9999px, 23px, 0);
+    transform: translateX(-5px) translateY(2px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(3px, 9999px, 10px, 0);
+    transform: translateX(-2px) translateY(2px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(29px, 9999px, 36px, 0);
+    transform: translateX(-1px) translateY(1px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(21px, 9999px, 30px, 0);
+    transform: translateX(-1px) translateY(2px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(3px, 9999px, 5px, 0);
+    transform: translateX(-3px) translateY(2px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(15px, 9999px, 16px, 0);
+    transform: translateX(-1px) translateY(2px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(7px, 9999px, 12px, 0);
+    transform: translateX(-1px) translateY(2px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(17px, 9999px, 22px, 0);
+    transform: translateX(-8px) translateY(2px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(23px, 9999px, 26px, 0);
+    transform: translateX(-1px) translateY(1px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(6px, 9999px, 14px, 0);
+    transform: translateX(-2px) translateY(1px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(6px, 9999px, 13px, 0);
+    transform: translateX(-6px) translateY(1px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(30px, 9999px, 38px, 0);
+    transform: translateX(-3px) translateY(2px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(19px, 9999px, 22px, 0);
+    transform: translateX(-3px) translateY(1px);
+    opacity: 1;
+  }
+}
+
+@keyframes noise-anim-2 {
+  0% {
+    clip: rect(27px, 9999px, 36px, 0);
+    transform: translateX(2px) translateY(-2px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(12px, 9999px, 16px, 0);
+    transform: translateX(1px) translateY(-1px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(11px, 9999px, 20px, 0);
+    transform: translateX(2px) translateY(-1px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(7px, 9999px, 14px, 0);
+    transform: translateX(1px) translateY(-1px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(10px, 9999px, 20px, 0);
+    transform: translateX(1px) translateY(-2px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(20px, 9999px, 24px, 0);
+    transform: translateX(2px) translateY(-1px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(17px, 9999px, 22px, 0);
+    transform: translateX(2px) translateY(-2px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(20px, 9999px, 24px, 0);
+    transform: translateX(2px) translateY(-1px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(16px, 9999px, 20px, 0);
+    transform: translateX(1px) translateY(-1px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(17px, 9999px, 26px, 0);
+    transform: translateX(1px) translateY(-1px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(17px, 9999px, 27px, 0);
+    transform: translateX(2px) translateY(-1px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(3px, 9999px, 9px, 0);
+    transform: translateX(1px) translateY(-2px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(13px, 9999px, 19px, 0);
+    transform: translateX(1px) translateY(-1px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(12px, 9999px, 13px, 0);
+    transform: translateX(2px) translateY(-1px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(21px, 9999px, 23px, 0);
+    transform: translateX(1px) translateY(-1px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(14px, 9999px, 15px, 0);
+    transform: translateX(1px) translateY(-2px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(18px, 9999px, 25px, 0);
+    transform: translateX(2px) translateY(-2px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(12px, 9999px, 16px, 0);
+    transform: translateX(2px) translateY(-1px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(27px, 9999px, 31px, 0);
+    transform: translateX(2px) translateY(-2px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(12px, 9999px, 17px, 0);
+    transform: translateX(2px) translateY(-2px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(2px, 9999px, 10px, 0);
+    transform: translateX(1px) translateY(-1px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(2px, 9999px, 10px, 0);
+    transform: translateX(1px) translateY(-1px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(18px, 9999px, 19px, 0);
+    transform: translateX(1px) translateY(-1px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(23px, 9999px, 30px, 0);
+    transform: translateX(2px) translateY(-1px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(21px, 9999px, 23px, 0);
+    transform: translateX(1px) translateY(-2px);
+    opacity: 1;
+  }
+  0% {
+    clip: rect(24px, 9999px, 29px, 0);
+    transform: translateX(2px) translateY(-1px);
+    opacity: 1;
+  }
 }

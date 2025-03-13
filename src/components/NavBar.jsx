@@ -1,6 +1,5 @@
 import { useState } from "react";
 import LogoDarkMode from "../../public/logo--zorus--white.svg?url";
-import "../../src/styles/global.css";
 
 const Navbar = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
@@ -227,7 +226,7 @@ const Navbar = () => {
           </ul>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a
-              href="/book-a-live-demo"
+              href="/book-a-demo"
               className="text-sm/6 font-semibold text-[#00f0ff]"
             >
               <button className="font-monospace btn glitch border-2 border-[#00f0ff] px-6 py-2.5 font-semibold shadow-[0_0_10px_#00f0ff]">
@@ -442,7 +441,7 @@ const Navbar = () => {
                   </ul>
                   <div className="mt-3 border-t border-white/10 pt-7">
                     <a
-                      href="/book-a-live-demo"
+                      href="/book-a-demo"
                       className="text-sm/6 font-semibold text-[#00f0ff]"
                     >
                       <button className="btn glitch w-full border-2 border-[#00f0ff] px-6 py-2.5 shadow-[0_0_10px_#00f0ff]">
