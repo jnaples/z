@@ -260,7 +260,7 @@ const Navbar = () => {
                 >
                   <span className="sr-only">Close menu</span>
                   <svg
-                    className="h-4 w-4 text-[#B5C7DD]"
+                    className="h-5 w-5 text-[#B5C7DD]"
                     width="312"
                     height="312"
                     viewBox="0 0 312 312"
