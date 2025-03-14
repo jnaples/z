@@ -1,0 +1,66 @@
+---
+const { route, label, className } = Astro.props;
+
+import { Image } from "astro:assets";
+import iconReferralUrl from "../assets/icon--referral.svg?url";
+import iconScalingUrl from "../assets/icon--scaling.svg?url";
+import Button from "./Button.astro";
+---
+
+<div class="container mx-auto max-w-7xl px-4 md:px-6">
+  <div class="w-full relative">
+    <div
+      class="msp-it-card-bg rounded-3xl flex mx-0 flex-col md:flex-row text-center justify-between md:gap-x-10"
+    >
+      <div
+        class="w-full lg:w-5/12 flex flex-col items-center justify-between py-10 pr-0 md:pl-10 lg:pl-20"
+      >
+        <div class="text-center">
+          <Image
+            class="mb-12 mx-auto"
+            src={iconReferralUrl}
+            alt=""
+            width="72"
+            height="72"
+          />
+          <h2 class="mb-4 lh-base text-4xl font-semibold font-monospace">
+            MSPs & MSSPs
+          </h2>
+          <p class="mb-6 w-full mx-auto text-lg">
+            See how Zorus transforms MSPs and MSSPs ability to protect clients,
+            enhance security expertise, and enjoy peace of mind.
+          </p>
+        </div>
+        <Button label="Learn More" route="/partners" />
+      </div>
+      <div class="bg-[#06efff] shadow-[0_0_12px_0_#06efff] w-px px-md-0"></div>
+      <div
+        class="w-full lg:w-5/12 flex flex-col items-center justify-between py-10 pl-0 md:pr-10 lg:pr-20"
+      >
+        <div>
+          <img
+            class="mb-12 mx-auto"
+            src={iconScalingUrl}
+            alt="icon"
+            width="72"
+            height="72"
+          />
+          <h2 class="mb-4 lh-base text-4xl font-semibold font-monospace">
+            IT Professionals
+          </h2>
+          <p class="mb-6 w-full mx-auto text-lg">
+            Integrate seamlessly into your IT ecosystem with enterprise-grade
+            DNS filtering, user analytics, and more.
+          </p>
+        </div>
+        <Button label="Learn More" route="/it-professionals" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .msp-it-card-bg {
+    background: #130e1e url("../../public/abstract-lines.svg");
+  }
+</style>

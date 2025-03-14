@@ -40,16 +40,15 @@ const Navbar = () => {
               <span className="sr-only">Open main menu</span>
               <svg
                 className="size-6 text-[#00f0ff]"
+                width="448"
+                height="352"
+                viewBox="0 0 448 352"
                 fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  d="M0 0H448V32H0V0ZM0 160H448V192H0V160ZM448 320V352H0V320H448Z"
+                  fill="currentColor"
                 />
               </svg>
             </button>
@@ -227,11 +226,9 @@ const Navbar = () => {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a
               href="/book-a-demo"
-              className="text-sm/6 font-semibold text-[#00f0ff]"
+              className="font-monospace btn glitch border-2 border-[#00f0ff] px-6 py-2.5 text-base font-semibold leading-7 text-[#00f0ff] shadow-[0_0_10px_#00f0ff]"
             >
-              <button className="font-monospace btn glitch border-2 border-[#00f0ff] px-6 py-2.5 font-semibold shadow-[0_0_10px_#00f0ff]">
-                BOOK A DEMO
-              </button>
+              BOOK A DEMO
             </a>
           </div>
         </nav>
@@ -263,18 +260,16 @@ const Navbar = () => {
                 >
                   <span className="sr-only">Close menu</span>
                   <svg
-                    className="size-6"
+                    className="h-4 w-4 text-[#B5C7DD]"
+                    width="312"
+                    height="312"
+                    viewBox="0 0 312 312"
                     fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                    data-slot="icon"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M6 18 18 6M6 6l12 12"
+                      d="M156 133.4L23.5 0.899902L0.900024 23.4999L133.4 156L0.900024 288.5L23.5 311.1L156 178.6L288.5 311.1L311.1 288.5L178.6 156L311.1 23.4999L288.5 0.899902L156 133.4Z"
+                      fill="currentColor"
                     />
                   </svg>
                 </button>
@@ -442,11 +437,9 @@ const Navbar = () => {
                   <div className="mt-3 border-t border-white/10 pt-7">
                     <a
                       href="/book-a-demo"
-                      className="text-sm/6 font-semibold text-[#00f0ff]"
+                      className="font-monospace btn glitch block w-full border-2 border-[#00f0ff] px-6 py-2.5 text-center text-base font-semibold leading-7 text-[#00f0ff] shadow-[0_0_10px_#00f0ff]"
                     >
-                      <button className="btn glitch w-full border-2 border-[#00f0ff] px-6 py-2.5 shadow-[0_0_10px_#00f0ff]">
-                        BOOK A DEMO
-                      </button>
+                      BOOK A DEMO
                     </a>
                   </div>
                 </div>

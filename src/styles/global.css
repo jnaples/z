@@ -34,8 +34,36 @@ p {
   background: center center / contain no-repeat;
 }
 
-/******** Nav dropdown background ********/
+/******** Image backgrounds ********/
+.grid-bg:before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../public/spotlights.svg") no-repeat top center;
+  background-size: contain;
+  z-index: -1;
+}
 
+.grid-bg:after {
+  content: "";
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../public/hero-grid.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  z-index: -1;
+  transform: scale(1.5);
+  opacity: 0.3;
+}
+
+/******** Nav dropdown background ********/
 .dropdown-nav-bg {
   background:
     var(--triangle-bg) center center / contain no-repeat,
