@@ -8,11 +8,6 @@ import Section from "../components/Section.astro";
 import abstractWaveUrl from "../assets/abstract-wave.svg?url";
 import BrianDarcy from "../assets/brian-darcy.png";
 import boxCornerUrl from "../assets/box-corner.svg?url";
-import checkboxUrl from "../assets/checkbox-gradient.svg?url";
-import ChannelProgramQ12024 from "../assets/channel-program-q1-24.png";
-import ChannelProgramQ22024 from "../assets/channel-program-q2-24.png";
-import ChannelProgramQ32024 from "../assets/channel-program-q3-24.png";
-import ChannelProgramQ42024 from "../assets/channel-program-q4-24.png";
 import GridBG from "../assets/grid-bg.png";
 import iconArrowRightUrl from "../assets/icon--arrow-right.svg?url";
 import iconClockUrl from "../assets/icon--clock.png";
@@ -26,74 +21,16 @@ import iconSupportUrl from "../assets/icon--support.svg?url";
 import LisaNiekamp from "../assets/lisa-niekamp-urwin.png";
 import Button from "../components/Button.astro";
 import MSPITCard from "../components/MSPITCard.astro";
+import Hero from "../components/Hero.astro";
+import Awards from "../components/Awards.astro";
+import AsideCTA from "../components/AsideCTA.astro";
+import YoutubeTestimonial from "../components/YoutubeTestimonial.astro";
 ---
 
 <Layout title={pageTitle}>
   <main class="overflow-x-hidden">
     <Section className="grid-bg relative">
-      <div
-        class="container mx-auto max-w-7xl flex items-center flex-col px-4 md:px-6"
-      >
-        <h1
-          class="text-4xl md:text-5xl mb-6 font-semibold w-full font-monospace lg:max-w-4xl md:leading-tight text-center leading-tight"
-          data-sal="slide-down"
-          data-sal-duration="600"
-        >
-          Block evolving threats with cybersecurity that refuses to let you fall
-          behind
-        </h1>
-        <div
-          class="mb-10 w-full lg:max-w-3xl"
-          data-sal="slide-down"
-          data-sal-duration="600"
-          data-sal-delay="200"
-        >
-          <ul class="flex flex-col gap-4 items-center list-unstyled">
-            <li class="flex items-center gap-2">
-              <img alt="checkbox" src={checkboxUrl} />
-              <p class="text-lg md:text-2xl">
-                DNS filtering without the DNS changes
-              </p>
-            </li>
-            <li class="flex items-center gap-2">
-              <img alt="checkbox" src={checkboxUrl} />
-              <p class="text-lg md:text-2xl">
-                Spot risky behaviors with user analytics
-              </p>
-            </li>
-            <li class="flex items-center gap-2">
-              <img alt="checkbox" src={checkboxUrl} />
-              <p class="text-lg md:text-2xl">
-                Isolate devices with Zero-trust isolation
-              </p>
-            </li>
-            <li class="flex items-center gap-2">
-              <img alt="checkbox" src={checkboxUrl} />
-              <p class="text-lg md:text-2xl">Geo IP & network filtering</p>
-            </li>
-            <li class="flex items-center gap-2">
-              <img alt="checkbox" src={checkboxUrl} />
-              <p class="text-lg md:text-2xl">SaaS inventory & usage</p>
-            </li>
-          </ul>
-        </div>
-        <div
-          class="flex flex-col items-center space-y-4"
-          data-sal="slide-down"
-          data-sal-duration="600"
-          data-sal-delay="400"
-        >
-          <a href="/book-a-demo">
-            <Button
-              class="btn glitch demo inline-block btn-solid uppercase"
-              label="See how Zorus can help you"
-            />
-          </a>
-          <span class="font-light text-[#b6c8dd] text-sm"
-            >No-pressure demo. Free two-week trial.</span
-          >
-        </div>
-      </div>
+      <Hero />
     </Section>
 
     <Section>
@@ -101,44 +38,7 @@ import MSPITCard from "../components/MSPITCard.astro";
     </Section>
 
     <Section>
-      <div class="container mx-auto max-w-7xl px-4 md:px-6">
-        <div class="flex">
-          <div class="w-full mx-auto text-center mb-8">
-            <h2
-              class="font-monospace font-semibold text-4xl mb-6 w-full mx-auto md:max-w-xl lg:max-w-3xl md:leading-tight text-center leading-tight"
-            >
-              Trusted by cybersecurity experts. Leading the way in DNS
-              protection.
-            </h2>
-            <div class="h-0.5 max-w-40 bg-[#00f0ff] my-6 mx-auto"></div>
-          </div>
-        </div>
-
-        <div
-          class="md:flex-wrap flex flex-col mx-auto gap-y-10 gap-x-10 items-center justify-center md:flex-row md:w-2/3 lg:w-full"
-        >
-          <Image
-            src={ChannelProgramQ12024}
-            class="mx-auto w-[140px] md:mx-0"
-            alt="Channel Program Q1 2024"
-          />
-          <Image
-            src={ChannelProgramQ22024}
-            class="mx-auto w-[140px] md:mx-0"
-            alt="Channel Program Q2 2024"
-          />
-          <Image
-            src={ChannelProgramQ32024}
-            class="mx-auto w-[140px] md:mx-0"
-            alt="Channel Program Q3 2024"
-          />
-          <Image
-            src={ChannelProgramQ42024}
-            class="mx-auto w-[140px] md:mx-0"
-            alt="Channel Program Q4 2024"
-          />
-        </div>
-      </div>
+      <Awards />
     </Section>
 
     <!------------------- CUT --------------------->
@@ -956,6 +856,7 @@ import MSPITCard from "../components/MSPITCard.astro";
 
     <!---------- YOUTUBE SECTION ------------->
     <Section>
+      <YoutubeTestimonial />
       <div class="container mx-auto max-w-7xl px-4 md:px-6">
         <h2
           class="lg:w-1/2 text-center mx-auto mb-6 font-monospace font-semibold text-4xl leading-tight md:leading-tight"
@@ -983,31 +884,8 @@ import MSPITCard from "../components/MSPITCard.astro";
       </div>
     </Section>
 
-    <!------------------- ASIDE SECTION ----------------------->
-    <aside aria-labelledby="cta" class="cta">
-      <div class="container mx-auto max-w-7xl px-4 md:px-6">
-        <div class="lg:w-5/6 xl:w-2/3 mx-auto mb-6">
-          <h2
-            id="cta"
-            class="text-center mx-auto mb-6 font-monospace font-semibold text-4xl leading-tight md:leading-tight"
-          >
-            Protect your clients. Protect your time. Protect your reputation.
-          </h2>
-          <p class="text-center text-lg">
-            It’s easy with Zorus Filtering with CyberSight
-          </p>
-        </div>
-        <div class="flex flex-col items-center space-y-4">
-          <a href="/book-a-live-demo">
-            <button class="btn glitch demo inline-block btn-solid uppercase"
-              >BOOK YOUR DEMO</button
-            >
-          </a>
-          <span class="font-light text-[#b6c8dd] text-sm"
-            >(It’s fast, fun and no-pressure — we promise.)</span
-          >
-        </div>
-      </div>
-    </aside>
+    <Section>
+      <AsideCTA />
+    </Section>
   </main>
 </Layout>

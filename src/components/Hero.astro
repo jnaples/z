@@ -1,0 +1,97 @@
+---
+import { Image } from "astro:assets";
+import Button from "./Button.astro";
+import checkboxUrl from "../assets/checkbox-gradient.svg?url";
+---
+
+<div
+  class="container mx-auto max-w-7xl flex items-center flex-col px-4 md:px-6"
+>
+  <h1
+    class="text-4xl md:text-5xl mb-6 font-semibold w-full font-monospace lg:max-w-4xl md:leading-tight text-center leading-tight"
+    data-sal="slide-down"
+    data-sal-duration="600"
+  >
+    Block evolving threats with cybersecurity that refuses to let you fall
+    behind
+  </h1>
+  <div
+    class="mb-10 w-full lg:max-w-3xl"
+    data-sal="slide-down"
+    data-sal-duration="600"
+    data-sal-delay="200"
+  >
+    <ul class="flex flex-col gap-4 items-center list-unstyled">
+      <li class="flex items-center gap-2">
+        <Image
+          alt="checkbox"
+          src={checkboxUrl}
+          width="27"
+          height="24"
+          alt="checkbox"
+        />
+        <p class="text-lg md:text-2xl">DNS filtering without the DNS changes</p>
+      </li>
+      <li class="flex items-center gap-2">
+        <Image
+          alt="checkbox"
+          src={checkboxUrl}
+          width="27"
+          height="24"
+          alt="checkbox"
+        />
+        <p class="text-lg md:text-2xl">
+          Spot risky behaviors with user analytics
+        </p>
+      </li>
+      <li class="flex items-center gap-2">
+        <Image
+          alt="checkbox"
+          src={checkboxUrl}
+          width="27"
+          height="24"
+          alt="checkbox"
+        />
+        <p class="text-lg md:text-2xl">
+          Isolate devices with Zero-trust isolation
+        </p>
+      </li>
+      <li class="flex items-center gap-2">
+        <Image
+          alt="checkbox"
+          src={checkboxUrl}
+          width="27"
+          height="24"
+          alt="checkbox"
+        />
+        <p class="text-lg md:text-2xl">Geo IP & network filtering</p>
+      </li>
+      <li class="flex items-center gap-2">
+        <Image
+          alt="checkbox"
+          src={checkboxUrl}
+          width="27"
+          height="24"
+          alt="checkbox"
+        />
+        <p class="text-lg md:text-2xl">SaaS inventory & usage</p>
+      </li>
+    </ul>
+  </div>
+  <div
+    class="flex flex-col items-center space-y-4"
+    data-sal="slide-down"
+    data-sal-duration="600"
+    data-sal-delay="400"
+  >
+    <a href="/book-a-demo">
+      <Button
+        class="btn glitch demo inline-block btn-solid uppercase"
+        label="See how Zorus can help you"
+      />
+    </a>
+    <span class="font-light text-[#b6c8dd] text-sm"
+      >No-pressure demo. Free two-week trial.</span
+    >
+  </div>
+</div>
