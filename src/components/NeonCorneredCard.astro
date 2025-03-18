@@ -1,0 +1,46 @@
+---
+const { icon, heading1, heading2, text } = Astro.props;
+import { Image } from "astro:assets";
+
+import boxCornerUrl from "../assets/box-corner.svg?url";
+import GridBG from "../assets/grid-bg.png";
+---
+
+<div
+  class="bg-gradient-to-br from-[#12051e] to-[#030307] border border-[#14152b] relative w-full"
+  data-sal="slide-left"
+  data-sal-duration="600"
+>
+  <img
+    src={boxCornerUrl}
+    alt="box corner decoration"
+    class="absolute -top-[3px] -left-[3px]"
+  />
+  <img
+    src={boxCornerUrl}
+    alt="box corner decoration"
+    class="absolute -top-[3px] -right-[3px] -scale-x-100"
+  />
+  <img
+    src={boxCornerUrl}
+    alt="box corner decoration"
+    class="absolute -bottom-[3px] -left-[3px] -scale-y-100"
+  />
+  <img
+    src={boxCornerUrl}
+    alt="box corner decoration"
+    class="absolute -bottom-[3px] -right-[3px] -scale-y-100 -scale-x-100"
+  />
+  <Image src={GridBG} alt="icon" class="absolute w-full z-10" />
+  <div class="p-10 md:p-6 lg:p-10 z-20 relative">
+    <img src={icon} alt="" class="mb-10 w-[72px] h-[72px]" />
+    <div>
+      <h4 class="mb-4 font-semibold text-2xl font-monospace">
+        {heading1}<br />{heading2}
+      </h4>
+    </div>
+    <p class="text-lg">
+      {text}
+    </p>
+  </div>
+</div>

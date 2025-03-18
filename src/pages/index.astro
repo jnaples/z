@@ -3,32 +3,44 @@ const pageTitle = "Zorus | Filtering & CyberSight";
 
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
-import Section from "../components/Section.astro";
 
-import abstractWaveUrl from "../assets/abstract-wave.svg?url";
-import BrianDarcy from "../assets/brian-darcy.png";
-import boxCornerUrl from "../assets/box-corner.svg?url";
-import GridBG from "../assets/grid-bg.png";
-import iconArrowRightUrl from "../assets/icon--arrow-right.svg?url";
-import iconClockUrl from "../assets/icon--clock.png";
-import iconDeployUrl from "../assets/icon--deploy.svg?url";
-import iconEndpointProtectionUrl from "../assets/icon--endpoint-protection.svg?url";
-import iconIdentifyUrl from "../assets/icon--identify.svg?url";
-import iconReferralUrl from "../assets/icon--referral.svg?url";
-import iconRevenueGrowthUrl from "../assets/icon--revenue-growth.svg?url";
-import iconScalingUrl from "../assets/icon--scaling.svg?url";
-import iconSupportUrl from "../assets/icon--support.svg?url";
-import LisaNiekamp from "../assets/lisa-niekamp-urwin.png";
 import Button from "../components/Button.astro";
 import MSPITCard from "../components/MSPITCard.astro";
+import GridThreeCols from "../components/GridThreeCols.astro";
 import Hero from "../components/Hero.astro";
 import Awards from "../components/Awards.astro";
 import AsideCTA from "../components/AsideCTA.astro";
 import YoutubeTestimonial from "../components/YoutubeTestimonial.astro";
+import TestimonialCard from "../components/TestimonialCard.astro";
+import Container from "../components/Container.astro";
+import NeonCorneredCard from "../components/NeonCorneredCard.astro";
+import LogosSlider from "../components/LogosSlider.astro";
+import ArrowDivider from "../components/ArrowDivider.astro";
+import Section from "../components/Section.astro";
+
+import LogoWhite from "../../public/logo--zorus--white.svg?url";
+import abstractWaveUrl from "../assets/abstract-wave.svg?url";
+import BrianDarcy from "../assets/brian-darcy.png";
+import LucCole from "../assets/luc-cole-min.png";
+import Globe from "../assets/globe.svg?url";
+import iconArrowRightUrl from "../assets/icon--arrow-right.svg?url";
+import iconClockUrl from "../assets/icon--clock.png?url";
+import iconDeployUrl from "../assets/icon--deploy.svg?url";
+import iconEndpointProtectionUrl from "../assets/icon--endpoint-protection.svg?url";
+import iconIdentifyUrl from "../assets/icon--identify.svg?url";
+import iconRevenueGrowthUrl from "../assets/icon--revenue-growth.svg?url";
+import iconSupportUrl from "../assets/icon--support.svg?url";
+import LisaNiekamp from "../assets/lisa-niekamp-urwin.png";
+import SeanLange from "../assets/sean-lange.png";
+import MarketingDashboard from "../assets/marketing-dashboard.png";
+import WhiteLabelDashboard from "../assets/white-labeling-dashboard.png";
+import ZorusFamily from "../assets/zorus-family.png";
+import Main from "../components/Main.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title={pageTitle}>
-  <main class="overflow-x-hidden">
+  <Main className="overflow-x-hidden">
     <Section className="grid-bg relative">
       <Hero />
     </Section>
@@ -41,8 +53,7 @@ import YoutubeTestimonial from "../components/YoutubeTestimonial.astro";
       <Awards />
     </Section>
 
-    <!------------------- CUT --------------------->
-    <Section class="cut--right overflow-visible">
+    <Section className="bg-cut-right overflow-visible relative">
       <div class="container mx-auto max-w-7xl px-4 md:px-6">
         <div class="flex">
           <div class="w-full mx-auto text-center">
@@ -75,219 +86,53 @@ import YoutubeTestimonial from "../components/YoutubeTestimonial.astro";
     </Section>
 
     <Section>
-      <div class="container mx-auto max-w-7xl px-4 md:px-6">
-        <div
-          class="testimonial-block mx-auto py-10 px-5 md:p-20 relative max-w-[900px]"
+      <TestimonialCard
+        quote='"Zorus is easy to deploy and easy to manage. It doesn’t break your environment, VPNs, Active Directory or custom DNS implementations like traditional DNS filtering. It’s also very cost-effective."'
+        avatar={BrianDarcy}
+        path="darcy"
+        caseStudy="Brian D’Arcy, CMIT Solutions"
+        linkText="Read Brian's client success story"
+      />
+    </Section>
+
+    <Section>
+      <Container>
+        <h2
+          class="text-center mx-auto font-monospace font-semibold text-4xl leading-tight mb-12 lg:max-w-3xl md:leading-tight"
         >
-          <img
-            src={abstractWaveUrl}
-            alt="abstract wave"
-            class="absolute bottom-0 end-0 testimonial--bg-img"
+          Zorus Filtering with CyberSight, DNS protection for the modern era
+        </h2>
+        <GridThreeCols>
+          <NeonCorneredCard
+            icon={iconDeployUrl}
+            heading1="Device-based"
+            heading2="filtering"
+            text="No DNS changes or reporting required. (Hallelujah!!) Save up to 45 minutes per installation."
           />
-          <h2 class="font-semibold text-2xl font-monospace mb-10">
-            “Zorus is easy to deploy and easy to manage. It doesn’t break your
-            environment, VPNs, Active Directory or custom DNS implementations
-            like traditional DNS filtering. It’s also very cost-effective.”
-          </h2>
-          <div class="testimonial--profile flex items-center relative z-3">
-            <Image
-              src={BrianDarcy}
-              alt="Mike Giovaninni, Netwerks"
-              class="w-20"
-            />
-            <div class="ml-4">
-              <p class="mb-1">Brian D’Arcy, CMIT Solutions</p>
-              <a
-                href="/2023/06/26/cmit-solutions-fills-a-key-need/"
-                class="btn link font-semibold text-[#00f0ff] font-monospace uppercase"
-                >Read Brian's client success story</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </Section>
-
-    <!------------------- ACHIEVEMENTS --------------------->
-    <Section>
-      <div>
-        <div class="container mx-auto max-w-7xl px-4 md:px-6">
-          <h2
-            class="text-center mx-auto font-monospace font-semibold text-4xl leading-tight mb-12 lg:max-w-3xl md:leading-tight"
-          >
-            Zorus Filtering with CyberSight, DNS protection for the modern era
-          </h2>
-          <div
-            class="grid grid-cols-1 md:grid-cols-3 justify-items-between gap-y-12 md:gap-y-0 md:gap-x-5 lg:gap-x-10"
-          >
-            <div
-              class="bg-gradient-to-br from-[#12051e] to-[#030307] border-[#14152b] relative w-full"
-              data-sal="slide-left"
-              data-sal-duration="600"
-            >
-              <img
-                src={boxCornerUrl}
-                alt="box corner decoration"
-                class="absolute -top-[3px] -left-[3px]"
-              />
-              <img
-                src={boxCornerUrl}
-                alt="box corner decoration"
-                class="absolute -top-[3px] -right-[3px] -scale-x-100"
-              />
-              <img
-                src={boxCornerUrl}
-                alt="box corner decoration"
-                class="absolute -bottom-[3px] -left-[3px] -scale-y-100"
-              />
-              <img
-                src={boxCornerUrl}
-                alt="box corner decoration"
-                class="absolute -bottom-[3px] -right-[3px] -scale-y-100 -scale-x-100"
-              />
-              <Image src={GridBG} alt="" class="absolute w-full z-10" />
-              <div class="p-10 z-20 relative">
-                <Image
-                  src={iconDeployUrl}
-                  alt=""
-                  width="72"
-                  height="72"
-                  class="mb-10"
-                />
-                <div>
-                  <h4 class="mb-4 font-semibold text-2xl font-monospace">
-                    Device-based
-                  </h4>filtering
-                </div>
-                <p class="text-lg">
-                  No DNS changes or reporting required. (Hallelujah!!) Save up
-                  to 45 minutes per installation.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="bg-gradient-to-br from-[#12051e] to-[#030307] border-[#14152b] relative w-full"
-              data-sal="slide-left"
-              data-sal-duration="600"
-            >
-              <img
-                src={boxCornerUrl}
-                alt="box corner decoration"
-                class="absolute -top-[3px] -left-[3px]"
-              />
-              <img
-                src={boxCornerUrl}
-                alt="box corner decoration"
-                class="absolute -top-[3px] -right-[3px] -scale-x-100"
-              />
-              <img
-                src={boxCornerUrl}
-                alt="box corner decoration"
-                class="absolute -bottom-[3px] -left-[3px] -scale-y-100"
-              />
-              <img
-                src={boxCornerUrl}
-                alt="box corner decoration"
-                class="absolute -bottom-[3px] -right-[3px] -scale-y-100 -scale-x-100"
-              />
-              <Image src={GridBG} alt="" class="absolute w-full z-10" />
-              <div class="p-10 z-20 relative">
-                <Image
-                  src={iconSupportUrl}
-                  alt=""
-                  width="72"
-                  height="72"
-                  class="mb-10"
-                />
-                <div>
-                  <h4 class="mb-4 font-semibold text-2xl font-monospace">
-                    Easy to deploy
-                  </h4>and use
-                </div>
-                <p class="text-lg">
-                  Spend less time learning and managing a new tool — and more
-                  time focused on your clients’ success.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="bg-gradient-to-br from-[#12051e] to-[#030307] border-[#14152b] relative w-full"
-              data-sal="slide-left"
-              data-sal-duration="600"
-            >
-              <img
-                src={boxCornerUrl}
-                alt="box corner decoration"
-                class="absolute -top-[3px] -left-[3px]"
-              />
-              <img
-                src={boxCornerUrl}
-                alt="box corner decoration"
-                class="absolute -top-[3px] -right-[3px] -scale-x-100"
-              />
-              <img
-                src={boxCornerUrl}
-                alt="box corner decoration"
-                class="absolute -bottom-[3px] -left-[3px] -scale-y-100"
-              />
-              <img
-                src={boxCornerUrl}
-                alt="box corner decoration"
-                class="absolute -bottom-[3px] -right-[3px] -scale-y-100 -scale-x-100"
-              />
-              <Image src={GridBG} alt="" class="absolute w-full z-10" />
-              <div class="p-10 z-20 relative">
-                <Image
-                  src={iconClockUrl}
-                  alt="clock icon"
-                  class="mb-10 w-[72px] h-[72px]"
-                />
-                <div>
-                  <h4 class="mb-4 font-semibold text-2xl font-monospace">
-                    Get in.
-                  </h4>Get out.
-                </div>
-                <p class="text-lg">
-                  Our global policy makes it easy to make mass changes and
-                  manage all of your customers at once.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+          <NeonCorneredCard
+            icon={iconSupportUrl}
+            heading1="Easy to deploy"
+            heading2="and use"
+            text="Spend less time learning and managing a new tool — and more time focused on your clients’ success."
+          />
+          <NeonCorneredCard
+            icon={iconClockUrl}
+            heading1="Get in."
+            heading2="Get out."
+            text="Our global policy makes it easy to make mass changes and manage all of your customers at once."
+          />
+        </GridThreeCols>
+      </Container>
     </Section>
 
     <Section>
-      <div class="container mx-auto max-w-7xl px-4 md:px-6">
-        <div class="testimonial-block relative">
-          <img
-            src={abstractWaveUrl}
-            alt="abstract wave"
-            class="absolute bottom-0 end-0 testimonial--bg-img"
-          />
-          <h2 class="font-semibold font-monospace">
-            “Zorus is straightforward and simple. I did my due diligence with
-            WebTitan and I thought I knew it, but there were so many gotchas!
-            Zorus is clean and just works."
-          </h2>
-          <div class="testimonial--profile flex items-center relative z-3">
-            <img
-              src="<?php echo get_theme_file_uri('/images/luc-cole-min.png') ?>"
-              alt="Mike Giovaninni, Netwerks"
-              class="testimonial--profile-pic"
-            />
-            <div class="ml-4">
-              <p>Luc Cole, Thatch Computer Consulting</p>
-              <a href="/blog" class="btn link font-semibold"
-                >Read more MSP success stories</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
+      <TestimonialCard
+        quote='“Zorus is straightforward and simple. I did my due diligence with WebTitan and I thought I knew it, but there were so many gotchas! Zorus is clean and just works."'
+        avatar={LucCole}
+        path="/luc-cole"
+        caseStudy="Luc Cole, Thatch Computer Consulting"
+        linkText="Read Luc's success story"
+      />
     </Section>
 
     <Section>
@@ -410,12 +255,12 @@ import YoutubeTestimonial from "../components/YoutubeTestimonial.astro";
     </Section>
 
     <Section>
-      <div class="container mx-auto max-w-7xl px-4 md:px-6">
+      <Container>
         <div class="mx-auto text-center mb-10 md:mb-20">
           <h2
-            class="font-monospace font-semibold text-4xl leading-tight md:leading-tight"
+            class="font-monospace font-semibold text-4xl leading-tight md:leading-tight max-w-2xl mx-auto"
           >
-            Why MSPs like you love Zorus
+            Why MSPs & IT Professionals like you love Zorus
           </h2>
           <div class="h-0.5 max-w-40 bg-[#00f0ff] my-6 mx-auto"></div>
         </div>
@@ -425,7 +270,7 @@ import YoutubeTestimonial from "../components/YoutubeTestimonial.astro";
           class="grid grid-cols-1 md:grid-cols-2 items-center space-y-10 md:space-y-0 md:gap-x-20 pb-20"
         >
           <div class="flex flex-col justify-items-center relative">
-            <h2 class="mb-6 font-semibold text-3xl font-monospace max-w-lg">
+            <h2 class="mb-6 font-semibold text-2xl font-monospace max-w-sm">
               Plays nice with the tools you use every day
             </h2>
             <div class="border-l-2 pl-6 border-[#00f0ff] mb-6 md:max-w-lg">
@@ -441,8 +286,101 @@ import YoutubeTestimonial from "../components/YoutubeTestimonial.astro";
               </p>
             </div>
             <a
-              href="/book-a-live-demo"
-              class="link flex items-center gap-x-3 capitalize font-semibold hover:bg-transparent hover:gap-4"
+              href="/book-a-demo"
+              class="text-[#00f0ff] flex items-center gap-x-3 uppercase font-semibold font-monospace hover:bg-transparent hover:gap-4 transition-all duration-200 ease-out"
+            >
+              DISCOVER ZORUS FILTERING
+              <Image
+                width="16"
+                height="16"
+                src={iconArrowRightUrl}
+                role="presentation"
+                alt="arrow image"
+              />
+            </a>
+          </div>
+
+          <LogosSlider />
+        </div>
+
+        <!--- Part 2 --->
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-x-20">
+          <div class="order-2 md:order-1">
+            <img
+              loading="lazy"
+              src={Globe}
+              alt="US based support"
+              class="w-full"
+            />
+          </div>
+          <div
+            class="flex flex-col justify-items-center relative ml-auto order-1 md:order-2 lg:w-10/12"
+          >
+            <h2 class="mb-6 font-semibold text-2xl font-monospace">
+              Fast, friendly U.S.-based support
+            </h2>
+            <div class="border-l-2 pl-6 border-[#00f0ff] mb-6 md:max-w-lg">
+              <p class="mb-4 text-lg">
+                Our U.S.-based support team is always ready to help you quickly
+                resolve problems, minimize downtime and keep your clients happy.
+              </p>
+              <p class="text-lg">
+                To quote our favorite Italian restaurant chain, “When you’re
+                here, you’re family.”
+              </p>
+            </div>
+            <a
+              href="/book-a-demo"
+              class="text-[#00f0ff] flex items-center gap-x-3 uppercase font-semibold font-monospace hover:bg-transparent hover:gap-4 transition-all duration-200 ease-out"
+            >
+              EXPLORE THE PLATFORM
+              <Image
+                width="16"
+                height="16"
+                src={iconArrowRightUrl}
+                role="presentation"
+                alt="arrow image"
+              />
+            </a>
+          </div>
+        </div>
+      </Container>
+    </Section>
+
+    <Section className="overflow-visible relative !py-0">
+      <ArrowDivider className="-scale-x-100 ml-auto -left-5" />
+    </Section>
+
+    <Section>
+      <TestimonialCard
+        quote='“Zorus support people are always a pleasure to work with. It’s not like that with the big software players. With Zorus, if I open a ticket, they’re on it."'
+        avatar={SeanLange}
+        path="/sean"
+        caseStudy="Sean Lange, Spidernet Solutions"
+        linkText="Read Sean’s client success story"
+      />
+    </Section>
+
+    <Section>
+      <Container>
+        <!--- Part 1 --->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 items-center gap-y-10 md:gap-y-0 md:gap-x-20 pb-20"
+        >
+          <div class="flex flex-col justify-items-center relative">
+            <h2 class="mb-6 font-semibold text-2xl font-monospace max-w-sm">
+              Brandable block pages, portal and more
+            </h2>
+            <div class="border-l-2 pl-6 border-[#00f0ff] mb-6 md:max-w-lg">
+              <p class="text-lg mb-4">
+                Your clients are yours. We make it easy to white-label our block
+                pages, portal and more to fit your brand.
+              </p>
+              <p class="text-lg">Your clients will never know we’re here.</p>
+            </div>
+            <a
+              href="/book-a-demo"
+              class="text-[#00f0ff] flex items-center gap-x-3 uppercase font-semibold font-monospace hover:bg-transparent hover:gap-4 transition-all duration-200 ease-out"
             >
               DISCOVER ZORUS FILTERING
               <Image
@@ -455,270 +393,27 @@ import YoutubeTestimonial from "../components/YoutubeTestimonial.astro";
             </a>
           </div>
           <div>
-            <div class="slider">
-              <div class="relative items-center overflow-hidden">
-                <div class="marquee flex min-w-max">
-                  <div class="flex min-w-max items-center opacity-100">
-                    <img
-                      width="200"
-                      src="<?php echo get_theme_file_uri('/images/datto.png') ?>"
-                      alt="datto"
-                      class="m-10 max-w-full"
-                    /><img
-                      width="200"
-                      src="<?php echo get_theme_file_uri('/images/automate.png') ?>"
-                      alt="Automate"
-                      class="m-10 max-w-full"
-                    /><img
-                      width="200"
-                      src="<?php echo get_theme_file_uri('/images/managed.png') ?>"
-                      alt="Managed"
-                      class="m-10 max-w-full"
-                    /><img
-                      width="200"
-                      src="<?php echo get_theme_file_uri('/images/datto.png') ?>"
-                      alt="datto"
-                      class="m-10 max-w-full"
-                    /><img
-                      width="200"
-                      src="<?php echo get_theme_file_uri('/images/automate.png') ?>"
-                      alt="Automate"
-                      class="m-10 max-w-full"
-                    /><img
-                      width="200"
-                      src="<?php echo get_theme_file_uri('/images/managed.png') ?>"
-                      alt="Managed"
-                      class="m-10 max-w-full"
-                    />
+            <!-- <div
+              class="rounded-lg w-48 bg-gradient-to-b from-[--logo-blue] to-[--logo-purple] p-px"
+            >
+              <div
+                class="flex flex-col gap-y-4 rounded-lg bg-gradient-to-b from-[#272C30] to-[#1E2226] p-5"
+              >
+                <p class="font-medium text-white">Custom logo</p>
+                <img class="h-10 w-auto" src={LogoWhite} alt="Zorus logo" />
+                <div class="space-y-2">
+                  <div class="flex gap-x-2">
+                    <div class="p-4 border border-blue-600 rounded-sm"></div>
                   </div>
-                  <div class="flex min-w-max items-center opacity-100">
-                    <img
-                      width="200"
-                      src="<?php echo get_theme_file_uri('/images/datto.png') ?>"
-                      alt="datto"
-                      class="m-10 max-w-full"
-                    /><img
-                      width="200"
-                      src="<?php echo get_theme_file_uri('/images/automate.png') ?>"
-                      alt="Automate"
-                      class="m-10 max-w-full"
-                    /><img
-                      width="200"
-                      src="<?php echo get_theme_file_uri('/images/managed.png') ?>"
-                      alt="Managed"
-                      class="m-10 max-w-full"
-                    /><img
-                      width="200"
-                      src="<?php echo get_theme_file_uri('/images/datto.png') ?>"
-                      alt="datto"
-                      class="m-10 max-w-full"
-                    /><img
-                      width="200"
-                      src="<?php echo get_theme_file_uri('/images/automate.png') ?>"
-                      alt="Automate"
-                      class="m-10 max-w-full"
-                    /><img
-                      width="200"
-                      src="<?php echo get_theme_file_uri('/images/managed.png') ?>"
-                      alt="Managed"
-                      class="m-10 max-w-full"
-                    />
-                  </div>
-                </div>
-                <div class="marquee2 flex min-w-max">
-                  <div class="flex min-w-max items-center opacity-100">
-                    <img
-                      width="200"
-                      src="<?php echo get_theme_file_uri('/images/kaseya.png') ?>"
-                      alt="Kaseya"
-                      class="m-10 max-w-full"
-                    /><img
-                      width="200"
-                      src="<?php echo get_theme_file_uri('/images/syncro.png') ?>"
-                      alt="Syncro"
-                      class="m-10 max-w-full"
-                    /><img
-                      width="200"
-                      src="<?php echo get_theme_file_uri('/images/gradient.png') ?>"
-                      alt="Gradient MSP"
-                      class="m-10 max-w-full"
-                    /><img
-                      width="200"
-                      src="<?php echo get_theme_file_uri('/images/kaseya.png') ?>"
-                      alt="Kaseya"
-                      class="m-10 max-w-full"
-                    /><img
-                      width="200"
-                      src="<?php echo get_theme_file_uri('/images/syncro.png') ?>"
-                      alt="Syncro"
-                      class="m-10 max-w-full"
-                    /><img
-                      width="200"
-                      src="<?php echo get_theme_file_uri('/images/gradient.png') ?>"
-                      alt="Gradient MSP"
-                      class="m-10 max-w-full"
-                    />
-                  </div>
-                  <div class="flex min-w-max items-center opacity-100">
-                    <img
-                      width="200"
-                      src="<?php echo get_theme_file_uri('/images/kaseya.png') ?>"
-                      alt="Kaseya"
-                      class="m-10 max-w-full"
-                    /><img
-                      width="200"
-                      src="<?php echo get_theme_file_uri('/images/syncro.png') ?>"
-                      alt="Syncro"
-                      class="m-10 max-w-full"
-                    /><img
-                      width="200"
-                      src="<?php echo get_theme_file_uri('/images/gradient.png') ?>"
-                      alt="Gradient MSP"
-                      class="m-10 max-w-full"
-                    /><img
-                      width="200"
-                      src="<?php echo get_theme_file_uri('/images/kaseya.png') ?>"
-                      alt="Kaseya"
-                      class="m-10 max-w-full"
-                    /><img
-                      width="200"
-                      src="<?php echo get_theme_file_uri('/images/syncro.png') ?>"
-                      alt="Syncro"
-                      class="m-10 max-w-full"
-                    /><img
-                      width="200"
-                      src="<?php echo get_theme_file_uri('/images/gradient.png') ?>"
-                      alt="Gradient MSP"
-                      class="m-10 max-w-full"
-                    />
-                  </div>
+                  <p class="text-[8px]">
+                    Currently set at the partner account level
+                  </p>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <!--- Part 2 --->
-        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-x-20">
-          <div class="order-2 md:order-1">
-            <img
-              loading="lazy"
-              src="<?php echo get_theme_file_uri('/images/globe.svg') ?>"
-              alt="integrations"
-              class="w-full"
-            />
-          </div>
-          <div
-            class="lg:w-10/12 flex flex-col justify-items-center relative ml-auto order-1 md:order-2"
-          >
-            <h2 class="mb-6 font-semibold text-3xl font-monospace max-w-lg">
-              Fast, friendly U.S.
-            </h2>-based support
-          </div>
-          <div class="border-l-2 pl-6 border-[#00f0ff] mb-6 md:max-w-lg">
-            <p class="mb-4 text-lg">
-              Our U.S.-based support team is always ready to help you quickly
-              resolve problems, minimize downtime and keep your clients happy.
-            </p>
-            <p class="text-lg">
-              To quote our favorite Italian restaurant chain, “When you’re here,
-              you’re family.”
-            </p>
-          </div>
-          <a
-            href="/book-a-live-demo"
-            class="link flex items-center gap-x-3 capitalize font-semibold hover:bg-transparent hover:gap-4"
-          >
-            EXPLORE THE PLATFORM
+            </div> -->
             <Image
-              width="16"
-              height="16"
-              src={iconArrowRightUrl}
-              role="presentation"
-              alt="arrow image"
-            />
-          </a>
-        </div>
-      </div>
-    </Section>
-
-    <Section class="arrow right overflow-visible">
-      <img
-        src="<?php echo get_theme_file_uri('/images/arrow.svg') ?>"
-        alt=""
-        role="presentation"
-        class="w-full"
-      />
-    </Section>
-
-    <Section>
-      <div class="container mx-auto max-w-7xl px-4 md:px-6">
-        <div class="testimonial-block relative">
-          <img
-            src={abstractWaveUrl}
-            alt="abstract wave"
-            class="absolute bottom-0 end-0 testimonial--bg-img"
-          />
-          <h2 class="font-semibold font-monospace">
-            “Zorus support people are always a pleasure to work with. It’s not
-            like that with the big software players. With Zorus, if I open a
-            ticket, they’re on it."
-          </h2>
-          <div class="testimonial--profile flex items-center relative z-3">
-            <img
-              src="<?php echo get_theme_file_uri('/images/sean-lange.png') ?>"
-              alt="Mike Giovaninni, Netwerks"
-              class="testimonial--profile-pic"
-            />
-            <div class="ml-4">
-              <p>Sean Lange, Spidernet Solutions</p>
-              <a
-                href="/2023/06/22/spidernet-selects-zorus/"
-                class="btn link font-semibold"
-                >Read Sean’s client success story</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </Section>
-
-    <Section>
-      <div class="container mx-auto max-w-7xl px-4 md:px-6">
-        <!--- Part 1 --->
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 items-center gap-y-10 md:gap-y-0 md:gap-x-20 pb-20"
-        >
-          <div class="flex flex-col justify-items-center relative">
-            <h2 class="mb-6 font-semibold text-3xl font-monospace max-w-lg">
-              Brandable block pages, portal and more
-            </h2>
-            <div class="border-l-2 pl-6 border-[#00f0ff] mb-6 md:max-w-lg">
-              <p class="text-lg mb-4">
-                Your clients are yours. We make it easy to white-label our block
-                pages, portal and more to fit your brand.
-              </p>
-              <p class="text-lg">Your clients will never know we’re here.</p>
-            </div>
-            <a
-              href="/book-a-live-demo"
-              class="link flex items-center gap-x-3 capitalize font-semibold hover:bg-transparent hover:gap-4"
-            >
-              EXPERIENCE CYBERSIGHT
-              <Image
-                width="16"
-                height="16"
-                src={iconArrowRightUrl}
-                role="presentation"
-                alt="arrow image"
-              />
-            </a>
-          </div>
-          <div>
-            <img
-              loading="lazy"
-              src="<?php echo get_theme_file_uri('/images/white-labeling-dashboard.png') ?>"
-              alt="integrations"
+              src={WhiteLabelDashboard}
+              alt="dashboard screenshot"
               class="w-full"
             />
           </div>
@@ -729,18 +424,17 @@ import YoutubeTestimonial from "../components/YoutubeTestimonial.astro";
           class="grid grid-cols-1 md:grid-cols-2 items-center gap-y-10 md:gap-y-0 md:gap-x-20 pt-0 pb-20 md:py-20"
         >
           <div class="order-2 md:order-1">
-            <img
-              loading="lazy"
-              src="<?php echo get_theme_file_uri('/images/dashboard-glass.png') ?>"
-              alt="integrations"
+            <Image
+              src={WhiteLabelDashboard}
+              alt="dashboard screenshot"
               class="w-full"
             />
           </div>
           <div
             class="flex flex-col justify-items-center relative ml-auto order-1 md:order-2"
           >
-            <h2 class="mb-6 font-semibold text-3xl font-monospace max-w-lg">
-              Tools to promote<br />YOUR business
+            <h2 class="mb-6 font-semibold text-2xl font-monospace">
+              Tools to promote YOUR business
             </h2>
             <div class="border-l-2 pl-6 border-[#00f0ff] mb-6 md:max-w-lg">
               <p class="text-lg mb-4 md:max-w-lg">
@@ -754,8 +448,8 @@ import YoutubeTestimonial from "../components/YoutubeTestimonial.astro";
               </p>
             </div>
             <a
-              href="/book-a-live-demo"
-              class="link flex items-center gap-x-3 capitalize font-semibold hover:bg-transparent hover:gap-4"
+              href="/book-a-demo"
+              class="text-[#00f0ff] flex items-center gap-x-3 uppercase font-semibold font-monospace hover:bg-transparent hover:gap-4 transition-all duration-200 ease-out"
             >
               LEARN MORE
               <Image
@@ -774,7 +468,7 @@ import YoutubeTestimonial from "../components/YoutubeTestimonial.astro";
           class="grid grid-cols-1 md:grid-cols-2 items-center gap-y-10 md:gap-y-0 md:gap-x-20 pt-0 md:py-20"
         >
           <div class="flex flex-col justify-items-center relative">
-            <h2 class="mb-6 font-semibold font-monospace text-3xl max-w-xl">
+            <h2 class="mb-6 font-semibold text-2xl font-monospace max-w-lg">
               Leaders, developers and engineers who care (for real)
             </h2>
             <div class="border-l-2 pl-6 border-[#00f0ff] mb-6 md:max-w-lg">
@@ -788,8 +482,8 @@ import YoutubeTestimonial from "../components/YoutubeTestimonial.astro";
               </p>
             </div>
             <a
-              href="/book-a-live-demo"
-              class="link flex items-center gap-x-3 capitalize font-semibold hover:bg-transparent hover:gap-4"
+              href="/book-a-demo"
+              class="text-[#00f0ff] flex items-center gap-x-3 uppercase font-semibold font-monospace hover:bg-transparent hover:gap-4 transition-all duration-200 ease-out"
               >DISCOVER CYBERSIGHT
               <Image
                 width="16"
@@ -801,91 +495,31 @@ import YoutubeTestimonial from "../components/YoutubeTestimonial.astro";
             </a>
           </div>
           <div>
-            <img
-              loading="lazy"
-              src="<?php echo get_theme_file_uri('/images/zorus-family.png') ?>"
-              alt="integrations"
-              class="w-full"
-            />
+            <Image src={ZorusFamily} alt="integrations" class="w-full" />
           </div>
         </div>
-      </div>
+      </Container>
     </Section>
 
-    <!------------------- ARROW SECTION --------------------->
-    <Section class="arrow left overflow-visible">
-      <div>
-        <img
-          src="<?php echo get_theme_file_uri('/images/arrow.svg') ?>"
-          alt=""
-          role="presentation"
-        />
-      </div>
+    <Section className="overflow-visible !py-0">
+      <ArrowDivider className="mr-auto -right-5" />
     </Section>
 
     <Section>
-      <div class="container mx-auto max-w-7xl px-4 md:px-6">
-        <div class="testimonial-block relative">
-          <img
-            src={abstractWaveUrl}
-            alt="abstract wave"
-            class="absolute bottom-0 end-0 testimonial--bg-img"
-          />
-          <h2 class="font-semibold font-monospace">
-            “Zorus is the kind of vendor that is really your partner. They’re
-            there to help you.”
-          </h2>
-          <div class="testimonial--profile flex items-center relative z-3">
-            <Image
-              src={LisaNiekamp}
-              alt="Lisa Niekamp-Urwin, Tomorrow’s Technology Today"
-              class="testimonial--profile-pic"
-            />
-            <div class="ml-4">
-              <p>Lisa Niekamp-Urwin, Tomorflex’s Technology Today</p>
-              <a
-                href="/2023/07/10/tomorflexs-technology-today/"
-                class="btn link font-semibold"
-                >Read Lisa's client success story</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
+      <TestimonialCard
+        quote='"Zorus is the kind of vendor that is really your partner. They’re there to help you."'
+        avatar={LisaNiekamp}
+        path="/lisa"
+        caseStudy="Lisa Niekamp-Urwin, Tomorrow’s Technology Today"
+        linkText="Read Lisa's client success story"
+      />
     </Section>
 
-    <!---------- YOUTUBE SECTION ------------->
     <Section>
       <YoutubeTestimonial />
-      <div class="container mx-auto max-w-7xl px-4 md:px-6">
-        <h2
-          class="lg:w-1/2 text-center mx-auto mb-6 font-monospace font-semibold text-4xl leading-tight md:leading-tight"
-        >
-          See how Zorus transformed this MSP's business
-        </h2>
-        <div class="md:w-11/12 lg:w-5/12 mx-auto text-center mb-10">
-          <p class="text-lg mb-3">
-            “We’re all skeptical of the latest shiny new thing. But Zorus
-            delivers. I have peace of mind. My clients have peace of mind.”
-          </p>
-          <p class="text-lg">— Mike Giovaninni, Netwerks</p>
-        </div>
-        <div
-          class="card card__testimonial rounded-lg bg-gradient-to-b from-[#05B4F4] to-[#660DAB] p-px testimonial__video-wrapper mx-auto"
-        >
-          <iframe
-            class="rounded-lg w-[360px] h-[200px] sm:w-[534px] sm:h-[296px] md:w-[718px] md:h-[398px] lg:w-[974px] lg:h-[540px] xl:w-[1230px] xl:h-[683px]"
-            src="https://www.youtube.com/embed/JZ_sSv_4xSU"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
-        </div>
-      </div>
     </Section>
 
-    <Section>
-      <AsideCTA />
-    </Section>
-  </main>
+    <AsideCTA />
+  </Main>
+  <Footer />
 </Layout>

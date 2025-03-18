@@ -1,0 +1,52 @@
+---
+const { quote, avatar, path, caseStudy, linkText } = Astro.props;
+import { Image } from "astro:assets";
+import abstractWaveUrl from "../assets/abstract-wave.svg?url";
+import Container from "./Container.astro";
+---
+
+<Container>
+  <div
+    class="mx-auto py-10 px-5 md:p-20 relative max-w-[900px] bg-[#130e1e] rounded-3xl overflow-hidden"
+  >
+    <Image
+      src={abstractWaveUrl}
+      alt="abstract wave"
+      width="370"
+      height="230"
+      class="absolute bottom-0 right-0"
+    />
+    <h2 class="font-semibold text-2xl font-monospace mb-10">
+      {quote}
+    </h2>
+    <div class="testimonial--profile flex items-center relative z-3">
+      <Image src={avatar} alt="Mike Giovaninni, Netwerks" class="w-20" />
+      <div class="ml-4">
+        <p class="mb-1">{caseStudy}</p>
+        <a
+          href={path}
+          class="btn link font-semibold text-[#00f0ff] font-monospace uppercase text-link relative"
+          >{linkText}</a
+        >
+      </div>
+    </div>
+  </div>
+</Container>
+
+<style>
+  .text-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0%;
+    background-color: #00f0ff;
+    border-bottom: 2px solid transparent;
+    transition: width 0.3s ease;
+    transform-origin: left;
+  }
+
+  .text-link:hover::after {
+    width: 100%;
+  }
+</style>

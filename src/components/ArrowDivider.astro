@@ -1,0 +1,12 @@
+---
+const { className } = Astro.props;
+
+import Arrow from "../../public/arrow.svg?url";
+---
+
+<img
+  src={Arrow}
+  alt="design arrow"
+  role="presentation"
+  class=`relative w-1/2 -top-[10vw] -mb-[14vw] ${className}`
+/>

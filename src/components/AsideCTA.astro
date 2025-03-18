@@ -1,9 +1,10 @@
 ---
 import Button from "./Button.astro";
+import Container from "./Container.astro";
 ---
 
-<aside aria-labelledby="cta" >
-  <div class="container mx-auto max-w-7xl px-4 md:px-6">
+<aside aria-labelledby="cta" class="grid-triangles-bg relative">
+  <Container className="py-16">
     <div class="lg:w-5/6 xl:w-2/3 mx-auto mb-6">
       <h2
         id="cta"
@@ -17,8 +18,26 @@ import Button from "./Button.astro";
     </div>
     <div class="flex flex-col items-center space-y-4">
       <Button route="/book-a-live-demo" label="BOOK YOUR DEMO" />
-        <span>(It’s fast, fun and no-pressure — we promise.)</span
+      <span class="text-[#b6c8dd]"
+        >(It’s fast, fun and no-pressure — we promise.)</span
       >
     </div>
-  </div>
+  </Container>
 </aside>
+
+<style>
+  .grid-triangles-bg:after {
+    background: url("../../public/grid-triangles.svg");
+    background-position: bottom;
+    background-size: cover;
+    bottom: -2rem;
+    content: "";
+    display: block;
+    height: 0;
+    padding-bottom: 25.3645833333%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.5;
+  }
+</style>

@@ -30,6 +30,7 @@ const NavbarLightMode = () => {
                 className="h-10 w-auto"
                 src={LogoLightMode}
                 alt="Zorus logo"
+                loading="eager"
               />
             </a>
           </div>
@@ -252,6 +253,7 @@ const NavbarLightMode = () => {
                     className="h-10 w-auto"
                     src={LogoDarkMode}
                     alt="Zorus logo"
+                    loading="eager"
                   />
                 </a>
                 {/*  Close button */}

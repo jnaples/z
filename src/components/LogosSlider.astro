@@ -1,0 +1,155 @@
+---
+import { Image } from "astro:assets";
+
+import Automate from "../assets/automate.png";
+import Datto from "../assets/datto.png";
+import Gradient from "../assets/gradient.png";
+import Kaseya from "../assets/kaseya.png";
+import Managed from "../assets/managed.png";
+import Syncro from "../assets/syncro.png";
+---
+
+<div class="slider relative overflow-hidden">
+  <div class="relative items-center overflow-hidden">
+    <div class="marquee flex min-w-max">
+      <div class="flex min-w-max items-center opacity-100">
+        <Image src={Datto} alt="datto" class="m-10 w-52" />
+        <Image src={Automate} alt="Automate" class="m-10 w-52" />
+        <Image src={Managed} alt="Managed" class="m-10 w-52" />
+        <Image src={Datto} alt="datto" class="m-10 w-52" />
+        <Image src={Automate} alt="Automate" class="m-10 w-52" />
+        <Image src={Managed} alt="Managed" class="m-10 w-52" />
+      </div>
+      <div class="flex min-w-max items-center opacity-100">
+        <Image src={Datto} alt="datto" class="m-10 w-52" /><img
+          width="200"
+          src="<?php echo get_theme_file_uri('/images/automate.png') ?>"
+          alt="Automate"
+          class="m-10 max-w-full"
+        />
+        <Image src={Managed} alt="Managed" class="m-10 w-52" />
+        <Image src={Datto} alt="datto" class="m-10 w-52" />
+        <Image src={Automate} alt="Automate" class="m-10 w-52" />
+        <Image src={Managed} alt="Managed" class="m-10 w-52" />
+      </div>
+    </div>
+    <div class="marquee2 flex min-w-max">
+      <div class="flex min-w-max items-center opacity-100">
+        <Image src={Kaseya} alt="Kaseya" class="m-10 w-52" />
+        <Image src={Syncro} alt="Syncro" class="m-10 w-52" />
+        <Image src={Gradient} alt="Gradient MSP" class="m-10 w-52" />
+        <Image src={Kaseya} alt="Kaseya" class="m-10 w-52" />
+        <Image src={Syncro} alt="Syncro" class="m-10 w-52" />
+        <Image src={Gradient} alt="Gradient MSP" class="m-10 w-52" />
+      </div>
+      <div class="flex min-w-max items-center opacity-100">
+        <Image src={Kaseya} alt="Kaseya" class="m-10 w-52" />
+        <Image src={Syncro} alt="Syncro" class="m-10 w-52" />
+        <Image src={Gradient} alt="Gradient MSP" class="m-10 w-52" />
+        <Image src={Kaseya} alt="Kaseya" class="m-10 w-52" />
+        <Image src={Syncro} alt="Syncro" class="m-10 w-52" />
+        <Image src={Gradient} alt="Gradient MSP" class="m-10 w-52" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .slider:before {
+    background: linear-gradient(
+      270deg,
+      #08030d 0%,
+      rgba(3, 0, 20, 0.5) 16.67%,
+      rgba(3, 0, 20, 0) 33.33%,
+      rgba(3, 0, 20, 0) 50%,
+      rgba(3, 0, 20, 0) 66.67%,
+      rgba(3, 0, 20, 0.5) 83.33%,
+      #0a0312 100%
+    );
+    content: "";
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .marquee {
+    -webkit-animation-name: marquee;
+    -moz-animation-name: marquee;
+    -o-animation-name: marquee;
+    /* animation-name: marquee; */
+    -webkit-animation-duration: 80s;
+    -moz-animation-duration: 80s;
+    -o-animation-duration: 80s;
+    animation-duration: 80s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    perspective: 1000;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .marquee2 {
+    -webkit-animation-name: marquee2;
+    -moz-animation-name: marquee2;
+    -o-animation-name: marquee2;
+    /* animation-name: marquee; */
+    -webkit-animation-duration: 80s;
+    -moz-animation-duration: 80s;
+    -o-animation-duration: 80s;
+    animation-duration: 80s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    perspective: 1000;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  @keyframes marquee {
+    0% {
+      -webkit-transform: translatez(0) translatex(0%);
+      -moz-transform: translatez(0) translatex(0%);
+      transform: translatez(0) translatex(0%);
+    }
+
+    100% {
+      -webkit-transform: translatez(0) translatex(0%);
+      -moz-transform: translatez(0) translatex(-50%);
+      transform: translatez(0) translatex(-50%);
+    }
+  }
+
+  @keyframes marquee2 {
+    0% {
+      -webkit-transform: translatez(0) translatex(-50%);
+      -moz-transform: translatez(0) translatex(-50%);
+      transform: translatez(0) translatex(-50%);
+    }
+    100% {
+      -webkit-transform: translatez(0) translatex(0%);
+      -moz-transform: translatez(0) translatex(0%);
+      transform: translatez(0) translatex(0%);
+    }
+  }
+</style>

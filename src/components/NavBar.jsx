@@ -28,6 +28,7 @@ const Navbar = () => {
                 className="h-10 w-auto"
                 src={LogoDarkMode}
                 alt="Zorus logo"
+                loading="eager"
               />
             </a>
           </div>
@@ -80,7 +81,7 @@ const Navbar = () => {
               {/* 2nd level menu */}
               {openDropdown === "compare" && (
                 <ul
-                  className={`absolute left-1/2 top-11 min-w-[240px] origin-top-right -translate-x-1/2 rounded-lg bg-gradient-to-b from-[#05B4F4] to-[#660DAB] p-px shadow-xl transition-all duration-300 ${
+                  className={`absolute left-1/2 top-11 min-w-[240px] origin-top-right -translate-x-1/2 rounded-lg bg-gradient-to-b from-[#5B4F4] to-[#660DAB] p-px shadow-xl transition-all duration-300 ${
                     openDropdown === "compare"
                       ? "pointer-events-auto translate-y-0 opacity-100"
                       : "pointer-events-none -translate-y-2 opacity-0"
@@ -250,6 +251,7 @@ const Navbar = () => {
                     className="h-10 w-auto"
                     src={LogoDarkMode}
                     alt="Zorus logo"
+                    loading="eager"
                   />
                 </a>
                 {/*  Close button */}

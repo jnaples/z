@@ -1,0 +1,269 @@
+---
+import { Image } from "astro:assets";
+import Container from "./Container.astro";
+import LogoDarkMode from "../../public/logo--zorus--white.svg?url";
+---
+
+<footer class="footer pb-20">
+  <div class="pyramid-bg overflow-visible relative mb-10 pt-28 pb-10">
+    <Container>
+      <div
+        class="flex flex-col items-center md:items-start justify-between lg:flex-row"
+      >
+        <div
+          class="mb-20 flex flex-col items-center gap-y-6 md:items-start lg:mb-0 w-full md:max-w-sm"
+        >
+          <div class="w-full">
+            <Image
+              class="mb-4"
+              width="140"
+              height="45"
+              src={LogoDarkMode}
+              alt="Zorus logo"
+            />
+            <p class="mb-4">Enterprise-grade cybersecurity</p>
+            <div class="flex gap-x-4">
+              <a
+                href="https://www.facebook.com/zorusinc/"
+                target="_blank"
+                rel="noopener"
+              >
+                <div class="hidden">Facebook</div>
+                <svg
+                  width="9"
+                  height="16"
+                  viewBox="0 0 9 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.3717 16V8.70169H7.81174L8.17704 5.85736H5.3717V4.04138C5.3717 3.21788 5.59944 2.65671 6.77567 2.65671L8.27586 2.656V0.112064C8.01634 0.0774629 7.12586 0 6.08986 0C3.927 0 2.44623 1.32549 2.44623 3.75977V5.85736H0V8.70169H2.44623V16H5.3717Z"
+                    fill="#B6C8DD"></path>
+                </svg>
+              </a>
+              <a
+                href="https://twitter.com/zorusinc"
+                target="_blank"
+                rel="noopener"
+              >
+                <div class="hidden">Twitter</div>
+                <svg
+                  width="17"
+                  height="14"
+                  viewBox="0 0 17 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.30731 13.5019C11.3452 13.5019 14.6472 8.49959 14.6472 4.16201C14.6472 4.01986 14.6443 3.87836 14.6378 3.73763C15.2787 3.27433 15.8358 2.69616 16.2754 2.03798C15.6872 2.29923 15.0542 2.47536 14.3902 2.55472C15.0679 2.14838 15.5883 1.50531 15.8337 0.738854C15.1992 1.11485 14.497 1.38839 13.7493 1.53565C13.1503 0.897637 12.2972 0.498535 11.3532 0.498535C9.54019 0.498535 8.07005 1.96867 8.07005 3.78095C8.07005 4.03862 8.09891 4.28905 8.15523 4.52943C5.42711 4.39228 3.00786 3.08598 1.38905 1.09975C1.10688 1.58474 0.944444 2.14845 0.944444 2.7496C0.944444 3.88847 1.52396 4.89385 2.40524 5.482C1.86681 5.46543 1.36089 5.31746 0.91846 5.07138C0.917756 5.08508 0.917756 5.09884 0.917756 5.11324C0.917756 6.70318 2.0494 8.03047 3.55135 8.33146C3.27563 8.40647 2.98552 8.44692 2.686 8.44692C2.47455 8.44692 2.26885 8.42599 2.06892 8.38772C2.48677 9.69191 3.69861 10.641 5.13553 10.6677C4.01182 11.5482 2.59653 12.0729 1.05849 12.0729C0.793597 12.0729 0.53235 12.0577 0.275391 12.0274C1.72831 12.9584 3.45323 13.5019 5.30731 13.5019Z"
+                    fill="#B6C8DD"></path>
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/zorusinc/"
+                target="_blank"
+                rel="noopener"
+                class="-mt-0.5"
+              >
+                <div class="hidden">Linkedin</div>
+                <svg
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.85778 5.31654H0.538683V15.9883H3.85778V5.31654Z"
+                    fill="#B6C8DD"></path>
+                  <path
+                    d="M4.12107 1.93487C4.12107 0.873286 3.25978 0.0117188 2.19916 0.0117188C1.1342 0.0117188 0.275391 0.873286 0.275391 1.93487C0.275391 2.99708 1.1342 3.85865 2.19916 3.85865C3.25978 3.85865 4.12107 2.99646 4.12107 1.93487Z"
+                    fill="#B6C8DD"></path>
+                  <path
+                    d="M9.11613 5.31638H5.93799V15.9888H9.24963V10.7106C9.24963 9.31798 9.51293 7.96941 11.238 7.96941C12.9395 7.96941 12.9606 9.56148 12.9606 10.7989V15.9881H16.2759V10.1354C16.2759 7.26127 15.6556 5.05176 12.2986 5.05176C10.6853 5.05176 9.60359 5.93631 9.16146 6.77552H9.11613V5.31638Z"
+                    fill="#B6C8DD"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <script
+            is:inline
+            charset="utf-8"
+            type="text/javascript"
+            src="//js.hsforms.net/forms/embed/v2.js"></script>
+          <script is:inline>
+            hbspt.forms.create({
+              region: "na1",
+              portalId: "3903009",
+              formId: "9bd9324d-2085-4cae-9904-bfaa0fb714cc",
+            });
+          </script>
+        </div>
+
+        <div
+          class="flex footer__right flex-wrap items-start md:justify-between lg:justify-end gap-x-20 w-full"
+        >
+          <!-- <div class="footer__menu">
+                  <h3>Products</h3>
+                  <ul>
+                    <li><a href="/filtering/">Filtering</a></li>
+                    <li>
+                      <a href="/engagement/">Engagement</a>
+                    </li>
+                  </ul>
+                </div> -->
+          <div>
+            <h3 class="font-semibold text-2xl">Company</h3>
+            <div class="h-0.5 max-w-6 bg-[#00f0ff] mt-3 mb-6"></div>
+            <ul class="space-y-6">
+              <li>
+                <a href="/about/" class="text-white font-light">About Zorus</a>
+              </li>
+              <li>
+                <a href="/partners/" class="text-white font-light"
+                  >MSP Partner Program</a
+                >
+              </li>
+              <li>
+                <a href="/it-professionals/" class="text-white font-light"
+                  >IT Professionals</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="/referrals" class="text-white font-light">Referrals</a>
+              </li>
+              <li>
+                <a href="/careers/" class="text-white font-light">Careers</a>
+              </li>
+              <li>
+                <a href="/contact/" class="text-white font-light"
+                  >Contact Zorus</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-2xl">Misc.</h3>
+            <div class="h-0.5 max-w-6 bg-[#00f0ff] mt-3 mb-6"></div>
+            <ul class="space-y-6">
+              <li>
+                <a href="/zorus-vs-competitors" class="text-white font-light"
+                  >Zorus vs.<br />Competitors</a
+                >
+              </li>
+              <li>
+                <a href="/zorus-vs-cisco-umbrella" class="text-white font-light"
+                  >Zorus vs.<br />Cisco Umbrella</a
+                >
+              </li>
+              <li>
+                <a href="/zorus-vs-dnsfilter" class="text-white font-light"
+                  >Zorus vs.<br />DNSFilter</a
+                >
+              </li>
+              <li>
+                <a href="/zorus-vs-webroot" class="text-white font-light"
+                  >Zorus vs.<br />Webroot DNS</a
+                >
+              </li>
+              <li>
+                <a href="/zorus-vs-webtitan" class="text-white font-light"
+                  >Zorus vs.<br />WebTitan</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="space-y-4 text-center md:text-start w-full md:w-auto mt-20 md:mt-0"
+          >
+            <p>
+              <span class="font-medium">Zorus, Inc.</span><br />9644 W.
+              Linebaugh Ave.<br />Tampa, FL 33626
+            </p>
+            <p>
+              <span class="font-medium">Support:</span>
+              <a href="mailto:support@zorustech.com" class="text-[#00f0ff]"
+                >support@zorustech.com</a
+              >
+            </p>
+            <p>
+              <span class="font-medium">After-hours emergencies</span>
+            </p>
+            <a href="mailto:emergency@zorustech.com" class="text-[#00f0ff]"
+              >emergency@zorustech.com</a
+            >
+          </div>
+        </div>
+      </div>
+    </Container>
+  </div>
+
+  <Container>
+    <div
+      class="flex flex-col md:flex-row items-center justify-between text-[#b6c8dd] md:gap-x-6"
+    >
+      <p>
+        © <span class="current-year"></span> Zorus, Inc | All rights reserved.
+      </p>
+      <div class="space-x-6">
+        <a href="/privacy" class="font-light">Privacy Policy</a>
+        <a href="/terms-of-service" class="font-light">Terms of Service</a>
+      </div>
+    </div>
+  </Container>
+</footer>
+
+<script is:inline>
+  document.querySelector(".current-year").textContent =
+    new Date().getFullYear();
+</script>
+<!-- <script
+  src="<?php echo get_theme_file_uri('./node_modules/sal.js/dist/sal.js') ?>"
+></script>
+<script>
+  sal();
+</script> -->
+
+<style>
+  .pyramid-bg {
+    background-image: url("../../public/pyramid.svg");
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .hs-richtext span,
+  .hs-email label,
+  .submitted-message {
+    color: #b6c8dd;
+    font-family: "Rubik" !important;
+    font-weight: 400 !important;
+  }
+
+  .hs-email label {
+    margin-bottom: 8px;
+  }
+
+  .hs-input {
+    border: 0;
+    padding: 8px 16px;
+    border-radius: 0 !important;
+    color: #041342;
+  }
+
+  .hs-button {
+    margin-top: 16px;
+    background: transparent;
+    border: 2px solid #00f0ff;
+    border-radius: 0;
+    color: #00f0ff;
+    box-shadow: 0 0 10px #00f0ff;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+    line-height: 30px;
+    padding: 10px 46px;
+  }
+</style>

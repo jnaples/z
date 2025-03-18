@@ -1,0 +1,40 @@
+<svg width="1498" height="1476" viewBox="0 0 1498 1476" fill="none"
+  xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0)">
+    <path opacity="0.4" d="M-0.00012207 2248.47L1497.14 1684.61L-0.00012207 0.752486L-1497.14 1684.61L-0.00012207 2248.47Z" fill="url(#paint0_linear)" fill-opacity="0.2" stroke="url(#paint1_linear)"/>
+    <path opacity="0.7" d="M-0.00012207 1997.47L1163.14 1559.54L-0.00012207 251.752L-1163.14 1559.54L-0.00012207 1997.47Z" fill="url(#paint2_linear)" fill-opacity="0.2" stroke="url(#paint3_linear)"/>
+    <g opacity="0.1" filter="url(#filter0_f)">
+      <ellipse cx="465.5" cy="804.5" rx="477.5" ry="465.5" fill="url(#paint4_radial)"/>
+    </g>
+  </g>
+  <defs>
+    <filter id="filter0_f" x="-116" y="235" width="1163" height="1139" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="52" result="effect1_foregroundBlur"/>
+    </filter>
+    <linearGradient id="paint0_linear" x1="920" y1="779" x2="577.715" y2="1801.81" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B0D6F" stop-opacity="0.79"/>
+      <stop offset="1" stop-color="#160B41" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear" x1="472" y1="775" x2="1492.78" y2="2179.57" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3F1C88"/>
+      <stop offset="1" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="paint2_linear" x1="714.873" y1="856.119" x2="449.057" y2="1650.68" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B0D6F" stop-opacity="0.79"/>
+      <stop offset="1" stop-color="#160B41" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="paint3_linear" x1="366.761" y1="853.012" x2="1159.62" y2="1944.31" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3F1C88"/>
+      <stop offset="1" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="paint4_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(465.5 804.5) rotate(90) scale(465.5 477.5)">
+      <stop stop-color="#660DAC"/>
+      <stop offset="1" stop-color="#660DAC" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="clip0">
+      <rect width="2996" height="1476" fill="white" transform="translate(-1498)"/>
+    </clipPath>
+  </defs>
+</svg>

@@ -3,13 +3,17 @@
 @tailwind utilities;
 
 :root {
-  --neon-blue: #00f0ff --primary-color: #041242;
+  --neon-blue: #00f0ff;
+  --logo-blue: #05B4F4;
+  --logo-purple: #660DAB;
+  --primary-color: #041242;
   --secondary-color: #030307;
   --heading-primary: #eee;
   --body-text: #b6c8dd;
   --heading-font-size: 2rem; /* Example: can use Tailwind's font-size values */
   --body-font-size: 1rem;
   --triangle-bg: url("../../public/triangles.svg");
+  --cut-bg: url("../../public/cut.svg");
 }
 
 h1,
@@ -31,7 +35,25 @@ p {
 }
 
 .bg-triangles {
-  background: center center / contain no-repeat;
+  background: var(--triangle-bg) center center / cover no-repeat;
+}
+
+.bg-cut-right:before {
+  background: var(--cut-bg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: 0;
+  padding-top: 98.5313751669%;
+  position: absolute;
+  right: 0;
+  top: -25rem;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  width: 100%;
+  z-index: -1;
 }
 
 /******** Image backgrounds ********/
@@ -89,6 +111,8 @@ p {
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
   animation: noise-anim 1s infinite linear alternate-reverse;
+  animation-name: noise-anim;
+  -webkit-animation-name: noise-anim;
   width: calc(100% + 2px);
   height: calc(100% + 2px);
   padding: inherit;
@@ -123,127 +147,127 @@ p {
     transform: translateX(-3px) translateY(1px);
     opacity: 1;
   }
-  0% {
+  4% {
     clip: rect(3px, 9999px, 5px, 0);
     transform: translateX(-2px) translateY(1px);
     opacity: 1;
   }
-  0% {
+  8% {
     clip: rect(22px, 9999px, 26px, 0);
     transform: translateX(-8px) translateY(2px);
     opacity: 1;
   }
-  0% {
+  12% {
     clip: rect(22px, 9999px, 26px, 0);
     transform: translateX(-2px) translateY(2px);
     opacity: 1;
   }
-  0% {
+  16% {
     clip: rect(1px, 9999px, 9px, 0);
     transform: translateX(-6px) translateY(2px);
     opacity: 1;
   }
-  0% {
+  20% {
     clip: rect(25px, 9999px, 31px, 0);
     transform: translateX(-2px) translateY(1px);
     opacity: 1;
   }
-  0% {
+  24% {
     clip: rect(24px, 9999px, 25px, 0);
     transform: translateX(-5px) translateY(1px);
     opacity: 1;
   }
-  0% {
+  28% {
     clip: rect(27px, 9999px, 32px, 0);
     transform: translateX(-8px) translateY(2px);
     opacity: 1;
   }
-  0% {
+  32% {
     clip: rect(23px, 9999px, 25px, 0);
     transform: translateX(-2px) translateY(2px);
     opacity: 1;
   }
-  0% {
+  36% {
     clip: rect(14px, 9999px, 21px, 0);
     transform: translateX(-2px) translateY(1px);
     opacity: 1;
   }
-  0% {
+  40% {
     clip: rect(18px, 9999px, 25px, 0);
     transform: translateX(-2px) translateY(2px);
     opacity: 1;
   }
-  0% {
+  44% {
     clip: rect(17px, 9999px, 26px, 0);
     transform: translateX(-7px) translateY(2px);
     opacity: 1;
   }
-  0% {
+  48% {
     clip: rect(2px, 9999px, 8px, 0);
     transform: translateX(-1px) translateY(2px);
     opacity: 1;
   }
-  0% {
+  52% {
     clip: rect(14px, 9999px, 23px, 0);
     transform: translateX(-5px) translateY(2px);
     opacity: 1;
   }
-  0% {
+  56% {
     clip: rect(3px, 9999px, 10px, 0);
     transform: translateX(-2px) translateY(2px);
     opacity: 1;
   }
-  0% {
+  60% {
     clip: rect(29px, 9999px, 36px, 0);
     transform: translateX(-1px) translateY(1px);
     opacity: 1;
   }
-  0% {
+  64% {
     clip: rect(21px, 9999px, 30px, 0);
     transform: translateX(-1px) translateY(2px);
     opacity: 1;
   }
-  0% {
+  68% {
     clip: rect(3px, 9999px, 5px, 0);
     transform: translateX(-3px) translateY(2px);
     opacity: 1;
   }
-  0% {
+  72% {
     clip: rect(15px, 9999px, 16px, 0);
     transform: translateX(-1px) translateY(2px);
     opacity: 1;
   }
-  0% {
+  76% {
     clip: rect(7px, 9999px, 12px, 0);
     transform: translateX(-1px) translateY(2px);
     opacity: 1;
   }
-  0% {
+  80% {
     clip: rect(17px, 9999px, 22px, 0);
     transform: translateX(-8px) translateY(2px);
     opacity: 1;
   }
-  0% {
+  84% {
     clip: rect(23px, 9999px, 26px, 0);
     transform: translateX(-1px) translateY(1px);
     opacity: 1;
   }
-  0% {
+  88% {
     clip: rect(6px, 9999px, 14px, 0);
     transform: translateX(-2px) translateY(1px);
     opacity: 1;
   }
-  0% {
+  92% {
     clip: rect(6px, 9999px, 13px, 0);
     transform: translateX(-6px) translateY(1px);
     opacity: 1;
   }
-  0% {
+  96% {
     clip: rect(30px, 9999px, 38px, 0);
     transform: translateX(-3px) translateY(2px);
     opacity: 1;
   }
-  0% {
+  100% {
     clip: rect(19px, 9999px, 22px, 0);
     transform: translateX(-3px) translateY(1px);
     opacity: 1;
@@ -256,127 +280,127 @@ p {
     transform: translateX(2px) translateY(-2px);
     opacity: 1;
   }
-  0% {
+  4% {
     clip: rect(12px, 9999px, 16px, 0);
     transform: translateX(1px) translateY(-1px);
     opacity: 1;
   }
-  0% {
+  8% {
     clip: rect(11px, 9999px, 20px, 0);
     transform: translateX(2px) translateY(-1px);
     opacity: 1;
   }
-  0% {
+  12% {
     clip: rect(7px, 9999px, 14px, 0);
     transform: translateX(1px) translateY(-1px);
     opacity: 1;
   }
-  0% {
+  16% {
     clip: rect(10px, 9999px, 20px, 0);
     transform: translateX(1px) translateY(-2px);
     opacity: 1;
   }
-  0% {
+  20% {
     clip: rect(20px, 9999px, 24px, 0);
     transform: translateX(2px) translateY(-1px);
     opacity: 1;
   }
-  0% {
+  24% {
     clip: rect(17px, 9999px, 22px, 0);
     transform: translateX(2px) translateY(-2px);
     opacity: 1;
   }
-  0% {
+  28% {
     clip: rect(20px, 9999px, 24px, 0);
     transform: translateX(2px) translateY(-1px);
     opacity: 1;
   }
-  0% {
+  32% {
     clip: rect(16px, 9999px, 20px, 0);
     transform: translateX(1px) translateY(-1px);
     opacity: 1;
   }
-  0% {
+  36% {
     clip: rect(17px, 9999px, 26px, 0);
     transform: translateX(1px) translateY(-1px);
     opacity: 1;
   }
-  0% {
+  40% {
     clip: rect(17px, 9999px, 27px, 0);
     transform: translateX(2px) translateY(-1px);
     opacity: 1;
   }
-  0% {
+  44% {
     clip: rect(3px, 9999px, 9px, 0);
     transform: translateX(1px) translateY(-2px);
     opacity: 1;
   }
-  0% {
+  48% {
     clip: rect(13px, 9999px, 19px, 0);
     transform: translateX(1px) translateY(-1px);
     opacity: 1;
   }
-  0% {
+  52% {
     clip: rect(12px, 9999px, 13px, 0);
     transform: translateX(2px) translateY(-1px);
     opacity: 1;
   }
-  0% {
+  56% {
     clip: rect(21px, 9999px, 23px, 0);
     transform: translateX(1px) translateY(-1px);
     opacity: 1;
   }
-  0% {
+  60% {
     clip: rect(14px, 9999px, 15px, 0);
     transform: translateX(1px) translateY(-2px);
     opacity: 1;
   }
-  0% {
+  64% {
     clip: rect(18px, 9999px, 25px, 0);
     transform: translateX(2px) translateY(-2px);
     opacity: 1;
   }
-  0% {
+  68% {
     clip: rect(12px, 9999px, 16px, 0);
     transform: translateX(2px) translateY(-1px);
     opacity: 1;
   }
-  0% {
+  72% {
     clip: rect(27px, 9999px, 31px, 0);
     transform: translateX(2px) translateY(-2px);
     opacity: 1;
   }
-  0% {
+  76% {
     clip: rect(12px, 9999px, 17px, 0);
     transform: translateX(2px) translateY(-2px);
     opacity: 1;
   }
-  0% {
+  80% {
     clip: rect(2px, 9999px, 10px, 0);
     transform: translateX(1px) translateY(-1px);
     opacity: 1;
   }
-  0% {
+  84% {
     clip: rect(2px, 9999px, 10px, 0);
     transform: translateX(1px) translateY(-1px);
     opacity: 1;
   }
-  0% {
+  88% {
     clip: rect(18px, 9999px, 19px, 0);
     transform: translateX(1px) translateY(-1px);
     opacity: 1;
   }
-  0% {
+  92% {
     clip: rect(23px, 9999px, 30px, 0);
     transform: translateX(2px) translateY(-1px);
     opacity: 1;
   }
-  0% {
+  96% {
     clip: rect(21px, 9999px, 23px, 0);
     transform: translateX(1px) translateY(-2px);
     opacity: 1;
   }
-  0% {
+  100% {
     clip: rect(24px, 9999px, 29px, 0);
     transform: translateX(2px) translateY(-1px);
     opacity: 1;
