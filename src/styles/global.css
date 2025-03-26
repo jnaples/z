@@ -4,8 +4,8 @@
 
 :root {
   --neon-blue: #00f0ff;
-  --logo-blue: #05B4F4;
-  --logo-purple: #660DAB;
+  --logo-blue: #05b4f4;
+  --logo-purple: #660dab;
   --primary-color: #041242;
   --secondary-color: #030307;
   --heading-primary: #eee;
@@ -405,4 +405,47 @@ p {
     transform: translateX(2px) translateY(-1px);
     opacity: 1;
   }
+}
+
+/******** Hubspot Newsletter Styling ********/
+
+.hbspt-form,
+.hs-input {
+  width: 100%;
+}
+
+.hs-richtext span,
+.hs-email label,
+.submitted-message {
+  color: #b6c8dd;
+  font-family: "Rubik" !important;
+  font-weight: 300 !important;
+  width: 100%;
+}
+
+.hs-email label {
+  margin-bottom: 8px;
+}
+
+.hs-input {
+  margin-top: 8px;
+  border: 0;
+  padding: 8px 16px;
+  border-radius: 0 !important;
+  color: #041342;
+}
+
+.hs-button {
+  margin-top: 16px;
+  background: transparent;
+  border: 2px solid #00f0ff;
+  border-radius: 0;
+  color: #00f0ff;
+  box-shadow: 0 0 10px #00f0ff;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  line-height: 30px;
+  padding: 10px 46px;
 }
