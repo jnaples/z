@@ -1,5 +1,5 @@
 ---
-const { icon, heading1, heading2, text } = Astro.props;
+const { icon, heading1, heading2, text, widthSize } = Astro.props;
 import { Image } from "astro:assets";
 
 import boxCornerUrl from "../assets/box-corner.svg?url";
@@ -39,7 +39,7 @@ import GridBG from "../assets/grid-bg.png";
         {heading1}<br />{heading2}
       </h4>
     </div>
-    <p class="text-lg">
+    <p class=`text-lg ${widthSize}`>
       {text}
     </p>
   </div>

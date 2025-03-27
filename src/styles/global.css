@@ -34,29 +34,22 @@ p {
   font-weight: 700;
 }
 
-.bg-triangles {
-  background: var(--triangle-bg) center center / cover no-repeat;
-}
-
-.bg-cut-right:before {
-  background: var(--cut-bg);
-  background-position: top;
+/******** Image backgrounds ********/
+.gradient-wave-bg:after {
+  content: "";
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../public/abstract-lines.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  content: "";
-  display: block;
-  height: 0;
-  padding-top: 98.5313751669%;
-  position: absolute;
-  right: 0;
-  top: -25rem;
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  width: 100%;
+  background-position: center;
   z-index: -1;
+  transform: scale(1.5);
 }
 
-/******** Image backgrounds ********/
 .grid-bg:before {
   content: "";
   position: absolute;
@@ -83,6 +76,44 @@ p {
   z-index: -1;
   transform: scale(1.5);
   opacity: 0.3;
+}
+
+.bg-triangles {
+  background: var(--triangle-bg) center center / cover no-repeat;
+}
+
+.bg-cut-right:before {
+  background: var(--cut-bg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: 0;
+  padding-top: 98.5313751669%;
+  position: absolute;
+  right: 0;
+  top: -25rem;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  width: 100%;
+  z-index: -1;
+}
+
+.bg-cut-left:before {
+  background: var(--cut-bg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: 0;
+  padding-top: 98.5313751669%;
+  position: absolute;
+  left: 0;
+  top: -25rem;
+  width: 100%;
+  z-index: -1;
 }
 
 /******** Nav dropdown background ********/

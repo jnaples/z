@@ -1,0 +1,164 @@
+---
+import Image from "astro/components/Image.astro";
+import Container from "../components/Container.astro";
+import Button from "../components/Button.astro";
+import Layout from "../layouts/Layout.astro";
+import Main from "../components/Main.astro";
+import AsideCTA from "../components/AsideCTA.astro";
+import Section from "../components/Section.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+
+import AmazonGiftCard from "../assets/amazon-card.png";
+import iconMSPUrl from "../assets/icon--msp.svg?url";
+import iconReferralUrl from "../assets/icon--referral.svg?url";
+import iconRevenueUrl from "../assets/icon--revenue.svg?url";
+---
+
+<Layout title="My Astro Site">
+  <Main className="overflow-x-clip">
+    <Section className="relative gradient-wave-bg">
+      <Container>
+        <Breadcrumb page="Referrals" />
+        <div class="gradient-wave-bg flex md:justify-center">
+          <div class="border-l-2 pl-6 border-[#00f0ff] md:mx-auto">
+            <h1
+              class="text-4xl font-semibold font-monospace w-full leading-tight md:leading-tight md:text-7xl md:max-w-sm max-w-xs"
+            >
+              Partner Referral Program
+            </h1>
+          </div>
+        </div>
+      </Container>
+    </Section>
+
+    <Section className="!pt-0">
+      <Container
+        ><div class="mx-auto max-w-[680px]">
+          <p class="text-lg mb-4">
+            The Zorus Team is thrilled to announce new incentives to our Partner
+            Referral Program, designed to reward you for spreading the word
+            about our services and products to your network.
+          </p>
+          <p class="text-lg mb-4">
+            Our Partner Referral Program offers you the opportunity to earn
+            generous incentives for each new client that you refer to us that
+            chooses to do a demo and or sign on.
+          </p>
+          <p class="text-lg mb-4">
+            We believe that our partnership with you can help us both to grow
+            our businesses and achieve greater success.
+          </p>
+          <p class="text-lg mb-4">
+            A more detailed breakdown of how the referral program works can be
+            found below.
+          </p>
+          <p class="text-lg">
+            No complicated or long forms to fill out just ensure your referral
+            mentions you during the demo and we'll take care of the rest!
+          </p>
+        </div></Container
+      >
+    </Section>
+
+    <Section className="grid-bg relative">
+      <Container
+        ><div
+          class="grid grid-cols-1 md:grid-cols-3 gap-y-5 max-w-[756px] mx-auto items-center justify-center justify-items-center font-light mb-20"
+        >
+          <div class="flex flex-col items-center text-center">
+            <Image
+              alt="MSP icon"
+              src={iconMSPUrl}
+              width="144"
+              height="144"
+              class="mb-4"
+            />
+            <span class="mt-4 text-[#b6c8dd] text-3xl">Referral books demo</span
+            >
+          </div>
+
+          <span class="text-[#b6c8dd] text-6xl">=</span>
+
+          <div class="flex flex-col items-center text-center">
+            <div class="amazon-card-wrapper flex align-items-center">
+              <Image alt="MSP icon" src={AmazonGiftCard} class="h-36 mb-4" />
+            </div>
+            <span class="mt-4 text-[#b6c8dd] text-3xl">$50 Amazon</span>Gift
+            Card
+          </div>
+        </div><div
+          class="grid grid-cols-1 md:grid-cols-3 gap-y-5 max-w-[756px] mx-auto items-center justify-center justify-items-center font-light"
+        >
+          <div class="flex flex-col items-center text-center">
+            <Image
+              alt="MSP icon"
+              src={iconReferralUrl}
+              width="144"
+              height="144"
+              class="mb-4"
+            />
+            <span class="mb-4 text-[#b6c8dd] text-3xl"
+              >Referral becomes a partner</span
+            >
+          </div>
+
+          <span class="text-[#b6c8dd] text-6xl">=</span>
+
+          <div class="flex flex-col items-center text-center">
+            <div class="amazon-card-wrapper flex align-items-center">
+              <Image
+                alt="MSP icon"
+                src={iconRevenueUrl}
+                width="144"
+                height="144"
+                class="mb-4"
+              />
+            </div>
+            <span class="mb-2 text-[#b6c8dd] text-3xl"
+              >50% OFF Referrer’s next bill</span
+            ><span class="font-light text-[#b6c8dd] text-sm"
+              >*Restrictions apply.</span
+            ><span class="font-light text-[#b6c8dd] text-sm"
+              >Ask associate for details.</span
+            >
+          </div>
+        </div>
+      </Container>
+    </Section>
+
+    <Section>
+      <Container
+        ><div class="max-w-[680px] mx-auto">
+          <div class="flex flex-col">
+            <div class="mx-auto text-center">
+              <h2
+                class="text-4xl mb-4 font-semibold w-full max-w-4xl md:leading-tight text-center leading-tight font-monospace"
+              >
+                Have someone in mind?
+              </h2>
+              <p class="text-lg mx-auto max-w-xl mb-8">
+                Feel free to share this link and have them book a demo and
+                mention your name when they schedule on the calendar below.
+              </p>
+            </div>
+
+            <div class="w-full mx-auto px-8 pt-8 pb-4 bg-white rounded-lg">
+              <script
+                charset="utf-8"
+                type="text/javascript"
+                src="//js.hsforms.net/forms/embed/v2.js"
+                is:inline></script>
+              <script is:inline>
+                hbspt.forms.create({
+                  region: "na1",
+                  portalId: "3903009",
+                  formId: "19d52817-d04b-41a4-a698-a21485b07341",
+                });
+              </script>
+            </div>
+          </div>
+        </div></Container
+      >
+    </Section>
+  </Main></Layout
+>

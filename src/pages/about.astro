@@ -1,15 +1,436 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Image from "astro/components/Image.astro";
+import Container from "../components/Container.astro";
 import Button from "../components/Button.astro";
+import Layout from "../layouts/Layout.astro";
+import Main from "../components/Main.astro";
+import AsideCTA from "../components/AsideCTA.astro";
+import Section from "../components/Section.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import TestimonialCard from "../components/TestimonialCard.astro";
+import NeonCorneredCard from "../components/NeonCorneredCard.astro";
+
+import BrettCheloff from "../assets/brett-cheloff.jpg";
+import KateTrojanowski from "../assets/kate-trojanowski.png";
+import MikeHruza from "../assets/michael-hruza.png";
+import ShawnTehrani from "../assets/shawn-tehrani.png";
+import ChannelChiefs from "../assets/channel-chiefs.png";
+import WomenOfTheChannel from "../assets/women-of-the-channel.png";
+import MarketingDashboard from "../assets/marketing-dashboard.png";
+import iconBuoyUrl from "../assets/icon--buoy.png?url";
+import iconTechnologyUrl from "../assets/icon--technology.svg?url";
+import iconLightbulbUrl from "../assets/icon--lightbulb.png?url";
+import iconDiscordUrl from "../assets/icon--discord.png?url";
+import iconMapUrl from "../assets/icon--map.png?url";
+import iconMSPUrl from "../assets/icon--msp.svg?url";
+import iconWhiteLabelUrl from "../assets/icon--white-label.svg?url";
+import iconReferralUrl from "../assets/icon--referral.svg?url";
+import iconRevenueGrowthUrl from "../assets/icon--revenue-growth.svg?url";
+import iconRevenueUrl from "../assets/icon--revenue.svg?url";
+import iconMonitoringUrl from "../assets/icon--monitoring.svg?url";
+import MikeGiovaninni from "../assets/mike-giovaninni.png";
+import Profile from "../components/Profile.astro";
 ---
 
 <Layout title="My Astro Site">
-  <main>
-    <h1 class="text-3xl font-bold text-center">
-      Hello, Astro with Tailwind and React!
-    </h1>
-    <div class="flex justify-center mt-4">
-      <Button label="Hello world" />
-    </div>
-  </main>
+  <Main className="overflow-x-clip">
+    <Section className="relative gradient-wave-bg">
+      <Container>
+        <Breadcrumb page="About" />
+        <div
+          class="flex flex-col items-center text-center"
+          data-sal="slide-down"
+          data-sal-duration="600"
+        >
+          <h1
+            class="text-4xl mb-6 font-semibold font-monospace w-full leading-tight mx-auto md:leading-tight md:text-5xl md:max-w-lg lg:max-w-4xl"
+          >
+            Made for IT pros by IT pros
+          </h1>
+          <div class="mb-10 w-full md:max-w-xl lg:max-w-2xl">
+            <p class="text-lg mb-4 md:text-2xl">
+              Zorus Filtering with CyberSight was designed by channel veterans
+              to help MSPs grow their business.
+            </p>
+            <p class="text-lg md:text-2xl">And protect their clients.</p>
+          </div>
+        </div>
+        <div
+          class="flex flex-col items-center space-y-4"
+          data-sal="slide-down"
+          data-sal-duration="600"
+          data-sal-delay="400"
+        >
+          <Button route="/book-a-demo" label="See how Zorus can help you" />
+          <span class="font-light text-[#b6c8dd] text-sm"
+            >No-pressure demo. Free two-week trial.</span
+          >
+        </div>
+      </Container>
+    </Section>
+
+    <Section>
+      <Container>
+        <div class="flex">
+          <div class="mx-auto text-center">
+            <h2
+              class="text-center mb-20 font-monospace font-semibold text-4xl leading-tight mx-auto md:leading-tight max-w-2xl"
+            >
+              DNS filtering shouldn’t drive you (or your clients) crazy
+            </h2>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 md:gap-x-10 mb-10"
+        >
+          <div
+            class="text-center md:text-start"
+            data-sal="slide-left"
+            data-sal-duration="600"
+          >
+            <Image
+              class="mb-10 mx-auto md:mx-0"
+              loading="lazy"
+              width="72"
+              height="72"
+              src={iconTechnologyUrl}
+              alt="Technology icon"
+            />
+            <h4 class="text-2xl mb-4 font-semibold font-monospace text-white">
+              Fast <br class="hidden md:block" />migration
+            </h4>
+            <p class="text-lg">
+              Zorus integrates with your RMM and immediately starts filtering.
+              No additional DNS changes or rerouting required.
+            </p>
+          </div>
+          <div
+            class="text-center md:text-start"
+            data-sal="slide-left"
+            data-sal-duration="600"
+            data-sal-delay="200"
+          >
+            <img
+              class="mb-10 mx-auto md:mx-0"
+              loading="lazy"
+              width="72"
+              height="72"
+              alt="MSP icon"
+              src={iconMSPUrl}
+            />
+            <h4 class="text-2xl mb-4 font-semibold text-white font-monospace">
+              Set it. <br />Forget it.
+            </h4>
+            <p class="text-lg">
+              Once the endpoints are deployed, every device is protected. No
+              matter where the user goes. No VPN. No rerouting. No worries.
+            </p>
+          </div>
+          <div
+            class="text-center md:text-start"
+            data-sal="slide-left"
+            data-sal-duration="600"
+            data-sal-delay="400"
+          >
+            <img
+              class="mb-10 mx-auto md:mx-0"
+              loading="lazy"
+              width="72"
+              height="72"
+              src={iconWhiteLabelUrl}
+              alt="White-label reporting icon"
+            />
+            <h4 class="text-2xl mb-4 font-semibold text-white font-monospace">
+              Make mass <br class="line-sm-only-break" />changes
+            </h4>
+            <p class="text-lg">
+              Need to block a domain for every client? Our global policy lets
+              you manage all of your customers — without breaking their
+              internet.
+            </p>
+          </div>
+          <div
+            class="text-center md:text-start"
+            data-sal="slide-left"
+            data-sal-duration="600"
+            data-sal-delay="600"
+          >
+            <img
+              class="mb-10 mx-auto md:mx-0"
+              loading="lazy"
+              width="72"
+              height="72"
+              src={iconMonitoringUrl}
+              alt="White-label reporting icon"
+            />
+            <h4 class="text-2xl mb-4 font-semibold text-white font-monospace">
+              Easy unblock <br class="line-sm-only-break" />requests
+            </h4>
+            <p class="text-lg">
+              Sometimes users need to visit blocked sites. With our
+              white-labeled unblock requests, you can let them through — without
+              any hassle.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col items-center space-y-4">
+          <Button route="/book-a-demo" label="See how Zorus can help you" />
+          <span class="font-light text-[#b6c8dd] text-sm"
+            >No-pressure demo. Free two-week trial.</span
+          >
+        </div>
+      </Container>
+    </Section>
+
+    <Section>
+      <TestimonialCard
+        quote='“The ease of use is absolutely key. I can turn a junior tech loose on the Zorus dashboard and they know what they’re looking at. It doesn’t take days to figure it out. We can set up a new client in under 10 minutes — it’s that fast."'
+        avatar={MikeGiovaninni}
+        path="mike"
+        caseStudy="Mike Giovaninni, Netwerks"
+        linkText="Read Mike’s client success story"
+      />
+    </Section>
+
+    <Section className="bg-cut-right overflow-visible relative">
+      <Container>
+        <div class="mx-auto text-center mb-10 md:mb-20">
+          <h2
+            class="font-monospace font-semibold text-4xl leading-tight mx-auto md:leading-tight max-w-2xl"
+          >
+            Get the insights you need to stand out from the competition
+          </h2>
+          <div class="h-0.5 max-w-40 bg-[#00f0ff] my-6 mx-auto"></div>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 items-center gap-y-10 md:gap-y-0 md:gap-x-20"
+        >
+          <div class="flex flex-col justify-items-center relative">
+            <h2 class="mb-6 font-semibold font-monospace text-2xl">
+              Brandable block pages, portal and more
+            </h2>
+            <div class="border-l-2 pl-6 border-[#00f0ff] mb-6 md:max-w-lg">
+              <p class="text-lg mb-4">
+                We know it takes a lot to stand out as an MSP these days. That’s
+                why we help you do more than just DNS filtering.
+              </p>
+              <p class="text-lg mb-4">
+                Our CyberSight technology analyzes how your clients’ users spend
+                time in thick client and SaaS applications.
+              </p>
+              <p class="text-lg">
+                Use these insights to save clients time, money and stress. And
+                keep them coming back for more.
+              </p>
+            </div>
+            <div class="flex md:mb-0">
+              <div
+                class="flex flex-col items-center space-y-4 w-full md:w-auto md:justify-start"
+              >
+                <Button
+                  route="book-a-demo"
+                  label="Book a demo"
+                  className="w-full"
+                />
+                <span class="font-light text-[#b6c8dd] text-sm text-center"
+                  >No-pressure demo.</span
+                >Free two-week trial.
+              </div>
+            </div>
+          </div>
+          <Image
+            loading="lazy"
+            src={MarketingDashboard}
+            alt="integrations"
+            class="w-full"
+          />
+        </div>
+      </Container>
+    </Section>
+
+    <Section>
+      <Container>
+        <h2
+          class="text-center mb-12 font-monospace font-semibold text-4xl leading-tight mx-auto md:leading-tight max-w-2xl"
+        >
+          Pricing and programs that help you maximize your MRR
+        </h2>
+        <div
+          class="flex mb-20 md:mb-12"
+          data-sal="slide-up"
+          data-sal-duration="600"
+        >
+          <div class="w-full lg:w-6/12 mx-auto">
+            <div
+              class="flex flex-col md:flex-row text-center md:text-start md:space-x-8 items-center"
+            >
+              <Image
+                src={iconRevenueUrl}
+                alt="icon"
+                class="mb-10 md:mb-0"
+                width="72"
+                height="72"
+              />
+              <div>
+                <h4 class="mb-2 text-2xl font-semibold font-monospace">
+                  Simple pricing
+                </h4>
+                <p class="text-lg">
+                  Take advantage of tier-based pricing. The more seats you have,
+                  the lower the cost per seat.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex mb-20 md:mb-12"
+          data-sal="slide-up"
+          data-sal-duration="600"
+          data-sal-delay="200"
+        >
+          <div class="w-full lg:w-6/12 mx-auto">
+            <div
+              class="flex flex-col md:flex-row text-center md:text-start md:space-x-8 items-center"
+            >
+              <Image
+                src={iconRevenueGrowthUrl}
+                alt="icon"
+                class="mb-10 md:mb-0"
+                width="72"
+                height="72"
+              />
+              <div>
+                <h4 class="mb-2 text-2xl font-semibold font-monospace">
+                  Added revenue potential
+                </h4>
+                <p class="text-lg">
+                  Boost your margin-making potential by offering our reporting
+                  services as an add-on.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex"
+          data-sal="slide-up"
+          data-sal-duration="600"
+          data-sal-delay="400"
+        >
+          <div class="w-full lg:w-6/12 mx-auto">
+            <div
+              class="flex flex-col md:flex-row text-center md:text-start md:space-x-8 items-center"
+            >
+              <Image
+                src={iconReferralUrl}
+                alt="icon"
+                class="mb-10 md:mb-0"
+                width="72"
+                height="72"
+              />
+              <div>
+                <h4 class="mb-2 text-2xl font-semibold font-monospace">
+                  Refer and save!
+                </h4>
+                <p class="text-lg">
+                  <a href="/referrals" class="text-[--neon-blue]"
+                    >Refer someone</a
+                  > to our demo and get a $50 gift card. If they sign up, we’ll take
+                  50% off your next bill.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </Section>
+
+    <Section className="bg-cut-left overflow-visible relative">
+      <Container>
+        <h2
+          class="text-center mb-12 font-monospace font-semibold text-4xl leading-tight mx-auto md:leading-tight max-w-2xl"
+        >
+          What matters to you
+        </h2>matters to us
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 items-start justify-items-between gap-y-12 max-w-screen-lg mx-auto md:gap-10"
+        >
+          <NeonCorneredCard
+            icon={iconDiscordUrl}
+            heading1="Join our"
+            heading2="Discord community"
+            text="Network with other MSPs and share your feedback."
+            widthSize="lg:w-4/6"
+          />
+          <NeonCorneredCard
+            icon={iconLightbulbUrl}
+            heading1="Participate in"
+            heading2="our focus groups"
+            text="Tell us how we can make Zorus better and more helpful."
+            widthSize="lg:w-4/6"
+          />
+          <NeonCorneredCard
+            icon={iconMapUrl}
+            heading1="Attend our"
+            heading2="product roadmaps"
+            text="See how we’re constantly improving Zorus to make your life easier."
+            widthSize="lg:w-4/6"
+          />
+          <NeonCorneredCard
+            icon={iconBuoyUrl}
+            heading1="Reach out to our"
+            heading2="support team anytime"
+            text="You or your clients have a cybersecurity issue or question, we’re on it!"
+            widthSize="lg:w-4/6"
+          />
+        </div></Container
+      >
+    </Section>
+
+    <Section>
+      <Container>
+        <h2
+          class="text-center mb-12 font-monospace font-semibold text-4xl leading-tight mx-auto md:leading-tight max-w-2xl"
+        >
+          Meet our team of IT pros, Star Wars buffs and D&D masters
+        </h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 justify-between"
+        >
+          <Profile
+            image={BrettCheloff}
+            name="Brett Cheloff"
+            title="CEO"
+            linkedInUrl="https://www.linkedin.com/in/brett-cheloff-32608a3/"
+            awards={ChannelChiefs}
+          />
+          <Profile
+            image={KateTrojanowski}
+            name="Kate Trojanowski"
+            title="VP of Product & Engineering"
+            linkedInUrl="https://www.linkedin.com/in/kmatrojano/"
+            awards={WomenOfTheChannel}
+          />
+
+          <Profile
+            image={MikeHruza}
+            name="Michael Hruza"
+            title="Director, Finance"
+            linkedInUrl="https://www.linkedin.com/in/michael-hruza-394b0758/"
+          />
+
+          <Profile
+            image={ShawnTehrani}
+            name="Shawn Tehrani"
+            title="VP of Sales"
+            linkedInUrl="https://www.linkedin.com/in/shawn-tehrani-477642b0/"
+          />
+        </div>
+      </Container>
+    </Section>
+  </Main>
+
+  <AsideCTA />
 </Layout>

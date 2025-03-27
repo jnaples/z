@@ -4,6 +4,7 @@ import "../styles/global.css";
 const { title } = Astro.props;
 import PreHeader from "../components/PreHeader.astro";
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -25,6 +26,7 @@ import NavBar from "../components/NavBar";
     <PreHeader />
     <NavBar client:load />
     <slot />
+    <Footer />
   </body>
 </html>
 
